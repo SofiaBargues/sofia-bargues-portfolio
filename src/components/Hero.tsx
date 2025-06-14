@@ -1,10 +1,8 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Youtube } from "lucide-react";
-
 const Hero = () => {
-  return (
-    <section className="min-h-screen flex items-center justify-center px-4 bg-gradient-to-br from-background to-secondary/20">
+  return <section className="min-h-screen flex items-center justify-center px-4 bg-gradient-to-br from-background to-secondary/20">
       <div className="max-w-4xl mx-auto text-center animate-fade-in">
         <div className="mb-6">
           <Badge variant="secondary" className="mb-4">
@@ -13,9 +11,7 @@ const Hero = () => {
           <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
             Sofia Bargues
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            I'm a frontend developer based in London, working with React, TypeScript, Tailwind, and Next.js. I'm passionate about tech, sharing my learning journey and open source projects with the developer community.
-          </p>
+          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">I'm a frontend developer based in London, working with React, TypeScript, Tailwind, and Next.js. I'm passionate about sharing my learning, tech journey, and open-source projects.</p>
         </div>
         
         <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -28,34 +24,17 @@ const Hero = () => {
         </div>
 
         <div className="flex justify-center gap-6">
-          <a 
-            href="https://github.com/SofiaBargues" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="p-3 rounded-full border border-border hover:bg-accent transition-all duration-300 hover:scale-110"
-          >
+          <a href="https://github.com/SofiaBargues" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full border border-border hover:bg-accent transition-all duration-300 hover:scale-110">
             <Github className="w-6 h-6" />
           </a>
-          <a 
-            href="https://uk.linkedin.com/in/sofia-bargues" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="p-3 rounded-full border border-border hover:bg-accent transition-all duration-300 hover:scale-110"
-          >
+          <a href="https://uk.linkedin.com/in/sofia-bargues" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full border border-border hover:bg-accent transition-all duration-300 hover:scale-110">
             <Linkedin className="w-6 h-6" />
           </a>
-          <a 
-            href="https://www.youtube.com/@sofiabargues" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="p-3 rounded-full border border-border hover:bg-accent transition-all duration-300 hover:scale-110"
-          >
+          <a href="https://www.youtube.com/@sofiabargues" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full border border-border hover:bg-accent transition-all duration-300 hover:scale-110">
             <Youtube className="w-6 h-6" />
           </a>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
