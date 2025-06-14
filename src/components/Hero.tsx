@@ -1,3 +1,4 @@
+
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Youtube } from "lucide-react";
@@ -14,7 +15,8 @@ const Hero = () => {
             Sofia Bargues
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            I'm a frontend developer based in London, working with React, TypeScript, Tailwind, and Next.js. I'm passionate about tech, sharing my learning journey and open source projects with the developer community.
+            UK-based frontend developer specializing in modern JavaScript frameworks, 
+            creating interactive web applications and educational content for developers.
           </p>
         </div>
         
