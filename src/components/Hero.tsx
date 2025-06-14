@@ -14,7 +14,7 @@ const Hero = () => {
             Sofia Bargues
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            I’m a frontend developer based in London, focused on React, TypeScript, Tailwind, and Next.js. I share my daily learning and projects. I’m passionate about tech, content creation, and contributing to the community through challenges and open source projects.
+            I'm a frontend developer based in London, working with React, TypeScript, Tailwind, and Next.js. I'm passionate about tech, sharing my learning journey and open source projects with the developer community.
           </p>
         </div>
         
