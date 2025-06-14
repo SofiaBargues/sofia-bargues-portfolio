@@ -11,7 +11,7 @@ const Hero = () => {
           <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent my-0 py-[7px]">
             Sofia Bargues
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">I'm a frontend developer, working with React, TypeScript, Tailwind, and Next.js. I'm passionate about sharing my learning, tech journey, and open-source projects.</p>
+          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">I'm passionate about sharing my learning, tech journey, and open-source projects.</p>
         </div>
         
         <div className="flex flex-wrap justify-center gap-4 mb-8">
