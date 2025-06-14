@@ -1,54 +1,22 @@
 
-import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 const Skills = () => {
   const skills = [
-    {
-      name: "React",
-      icon: "⚛️",
-      description: "Building modern user interfaces"
-    },
-    {
-      name: "TypeScript",
-      icon: "📘",
-      description: "Type-safe JavaScript development"
-    },
-    {
-      name: "Next.js",
-      icon: "▲",
-      description: "Full-stack React framework"
-    },
-    {
-      name: "Tailwind CSS",
-      icon: "🎨",
-      description: "Utility-first CSS framework"
-    },
-    {
-      name: "JavaScript",
-      icon: "🟨",
-      description: "Core web development language"
-    },
-    {
-      name: "Node.js",
-      icon: "🟢",
-      description: "Backend JavaScript runtime"
-    },
-    {
-      name: "Git",
-      icon: "📦",
-      description: "Version control system"
-    },
-    {
-      name: "Vercel",
-      icon: "🔺",
-      description: "Deployment and hosting platform"
-    }
+    "React",
+    "TypeScript",
+    "Next.js",
+    "Tailwind CSS",
+    "JavaScript",
+    "Node.js",
+    "Git",
+    "Vercel"
   ];
 
   return (
     <section id="skills" className="py-20 px-4 bg-secondary/10">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16 animate-fade-in">
+        <div className="text-center mb-8 animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Technologies & Tools
           </h2>
@@ -57,21 +25,15 @@ const Skills = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {skills.map((skill, index) => (
-            <Card 
-              key={skill.name} 
-              className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-slide-in-left"
-              style={{ animationDelay: `${index * 0.1}s` }}
+        <div className="flex flex-wrap gap-4 justify-center">
+          {skills.map((skill) => (
+            <Badge
+              key={skill}
+              variant="secondary"
+              className="px-4 py-2 text-base font-semibold rounded-full bg-secondary/50 text-foreground shadow-none"
             >
-              <CardContent className="p-6 text-center">
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                  {skill.icon}
-                </div>
-                <h3 className="font-semibold text-lg mb-2">{skill.name}</h3>
-                <p className="text-sm text-muted-foreground">{skill.description}</p>
-              </CardContent>
-            </Card>
+              {skill}
+            </Badge>
           ))}
         </div>
       </div>
