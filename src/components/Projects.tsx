@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -14,6 +15,7 @@ const Projects = () => {
     title: "Frontend-30",
     description: "A comprehensive series of 30 coding challenges designed to help developers improve their skills in React, Tailwind CSS, and TypeScript through hands-on practice.",
     technologies: ["React", "Tailwind CSS", "TypeScript", "Educational Content"],
+    liveUrl: "https://frontend-30.vercel.app/",
     githubUrl: "https://github.com/SofiaBargues/frontend-30",
     featured: true
   }];
@@ -54,6 +56,7 @@ const Projects = () => {
                   </div>
                 </div>
                 <div className="flex gap-3">
+                  {/* Mostrar View Live solo si existe el liveUrl */}
                   {project.liveUrl && <Button size="sm" asChild>
                       <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                         View Live
