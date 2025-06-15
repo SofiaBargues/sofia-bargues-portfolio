@@ -8,7 +8,7 @@ const Hero = () => {
           <Badge variant="secondary" className="mb-4">
             Frontend Developer
           </Badge>
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent py-[7px]">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
             Sofia Bargues
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">I'm passionate about sharing my learning, tech journey, and open-source projects.</p>
