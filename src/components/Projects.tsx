@@ -19,10 +19,10 @@ const Projects = () => {
     githubUrl: "https://github.com/SofiaBargues/frontend-30",
     featured: true
   }];
-  return <section id="projects" className="py-20 px-4">
+  return <section id="projects" className="py-20 px-4 bg-secondary border-2 border-border rounded-2xl">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
             Featured Projects
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -33,13 +33,13 @@ const Projects = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {projects.map((project, index) => <Card key={project.title} style={{
           animationDelay: `${index * 0.2}s`
-        }} className="">
+        }} className="border-2 border-border rounded-xl bg-card">
               <CardHeader>
                 <div className="flex items-start justify-between">
                   <div>
-                    <CardTitle className="text-xl mb-2 group-hover:text-primary transition-colors">
+                    <CardTitle className="text-xl mb-2 group-hover:text-primary transition-colors text-foreground">
                       {project.title}
-                      {project.featured && <Badge variant="secondary" className="ml-2">Featured</Badge>}
+                      {project.featured && <Badge variant="secondary" className="ml-2 rounded-xl border-2 border-border">Featured</Badge>}
                     </CardTitle>
                     <CardDescription className="text-base leading-relaxed">
                       {project.description}
@@ -50,19 +50,19 @@ const Projects = () => {
               <CardContent>
                 <div className="mb-4">
                   <div className="flex flex-wrap gap-2">
-                    {project.technologies.map(tech => <Badge key={tech} variant="outline" className="text-xs">
+                    {project.technologies.map(tech => <Badge key={tech} variant="outline" className="text-xs rounded-xl border-2 border-border">
                         {tech}
                       </Badge>)}
                   </div>
                 </div>
                 <div className="flex gap-3">
                   {/* Mostrar View Live solo si existe el liveUrl */}
-                  {project.liveUrl && <Button size="sm" asChild>
+                  {project.liveUrl && <Button size="sm" asChild className="rounded-xl border-2 border-border">
                       <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                         View Live
                       </a>
                     </Button>}
-                  <Button variant="outline" size="sm" asChild>
+                  <Button variant="outline" size="sm" asChild className="rounded-xl border-2 border-border">
                     <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                       <Github className="w-4 h-4 mr-2" />
                       Code

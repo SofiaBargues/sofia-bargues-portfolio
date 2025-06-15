@@ -1,9 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
 const About = () => {
-  return <section id="about" className="py-20 px-4 bg-secondary/10">
+  return <section id="about" className="py-20 px-4 bg-secondary border-2 border-border rounded-2xl">
       <div className="max-w-4xl mx-auto animate-fade-in">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
             About Me
           </h2>
           <p className="text-xl text-muted-foreground">
@@ -11,9 +11,9 @@ const About = () => {
           </p>
         </div>
 
-        <Card className="group hover:shadow-lg transition-all duration-300">
+        <Card className="group hover:shadow-lg transition-all duration-300 border-2 border-border rounded-xl bg-card">
           <CardContent className="p-8 md:p-12">
-            <div className="space-y-6 text-lg leading-relaxed">
+            <div className="space-y-6 text-lg leading-relaxed text-foreground">
               <p>I'm a frontend web developer based in London, England, with a passion for building modern, interactive web applications. My journey in tech is driven by curiosity and a commitment to continuous learning.</p>
               
               <p>

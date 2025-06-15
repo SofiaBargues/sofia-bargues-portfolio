@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -20,26 +19,26 @@ export default {
 		},
 		extend: {
 			colors: {
-				border: 'hsl(var(--border))',
+				border: '#212124', // Slightly softened black border
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
-				background: 'hsl(var(--background))',
-				foreground: 'hsl(var(--foreground))',
+				background: '#e6e6e6', // HERO section light grey as main bg for the app
+				foreground: '#18181a', // Strong barely-off-black
 				primary: {
-					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					DEFAULT: '#18181a', // Black for main buttons, titles
+					foreground: '#fff'
 				},
 				secondary: {
-					DEFAULT: 'hsl(var(--secondary))',
-					foreground: 'hsl(var(--secondary-foreground))'
+					DEFAULT: '#f7f7f8', // Lighter grey for cards/sections
+					foreground: '#18181a',
 				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
 					foreground: 'hsl(var(--destructive-foreground))'
 				},
 				muted: {
-					DEFAULT: 'hsl(var(--muted))',
-					foreground: 'hsl(var(--muted-foreground))'
+					DEFAULT: '#cacace',
+					foreground: '#6d6e73'
 				},
 				accent: {
 					DEFAULT: 'hsl(var(--accent))',
@@ -50,8 +49,8 @@ export default {
 					foreground: 'hsl(var(--popover-foreground))'
 				},
 				card: {
-					DEFAULT: 'hsl(var(--card))',
-					foreground: 'hsl(var(--card-foreground))'
+					DEFAULT: '#f7f7f8',
+					foreground: '#18181a',
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
@@ -65,9 +64,12 @@ export default {
 				}
 			},
 			borderRadius: {
-				lg: 'var(--radius)',
-				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)'
+				lg: '1.2rem', // Bolder rounding for card/button
+				md: '0.9rem',
+				sm: '0.7rem'
+			},
+			borderWidth: {
+				DEFAULT: '2px',
 			},
 			keyframes: {
 				'accordion-down': {

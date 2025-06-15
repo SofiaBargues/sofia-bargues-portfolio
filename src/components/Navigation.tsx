@@ -23,11 +23,11 @@ const Navigation = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled ? 'bg-background/95 backdrop-blur-sm border-b border-border' : 'bg-transparent'
+      scrolled ? 'bg-background/95 backdrop-blur-sm border-b-2 border-border' : 'bg-transparent'
     }`}>
       <div className="max-w-6xl mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="font-bold text-xl">
+          <div className="font-bold text-xl text-foreground">
             Sofia Bargues
           </div>
           
@@ -53,6 +53,7 @@ const Navigation = () => {
             <Button 
               size="sm" 
               onClick={() => scrollToSection('contact')}
+              className="bg-primary text-primary-foreground border-2 border-border rounded-xl"
             >
               Contact
             </Button>
@@ -62,5 +63,4 @@ const Navigation = () => {
     </nav>
   );
 };
-
 export default Navigation;

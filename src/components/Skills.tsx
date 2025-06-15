@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 
 const Skills = () => {
@@ -46,10 +45,10 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 px-4 bg-secondary/10">
+    <section id="skills" className="py-20 px-4 bg-secondary border-2 border-border rounded-2xl">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
             Technologies & Tools
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -61,14 +60,14 @@ const Skills = () => {
           {skills.map((skill, index) => (
             <Card 
               key={skill.name} 
-              className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-slide-in-left"
+              className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-slide-in-left border-2 border-border rounded-xl bg-card"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardContent className="p-6 text-center">
                 <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
                   {skill.icon}
                 </div>
-                <h3 className="font-semibold text-lg mb-2">{skill.name}</h3>
+                <h3 className="font-semibold text-lg mb-2 text-foreground">{skill.name}</h3>
                 <p className="text-sm text-muted-foreground">{skill.description}</p>
               </CardContent>
             </Card>
