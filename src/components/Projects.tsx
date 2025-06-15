@@ -20,13 +20,6 @@ const Projects = () => {
       technologies: ["React", "Tailwind CSS", "TypeScript", "Educational Content"],
       githubUrl: "https://github.com/SofiaBargues/frontend-30",
       featured: true
-    },
-    {
-      title: "Interactive Web Applications",
-      description: "Collection of modern web applications showcasing best practices in frontend development with focus on user experience and performance.",
-      technologies: ["Next.js", "React", "JavaScript", "CSS"],
-      githubUrl: "https://github.com/SofiaBargues",
-      featured: false
     }
   ];
 
