@@ -1,9 +1,6 @@
-
 import { Card, CardContent } from "@/components/ui/card";
-
 const About = () => {
-  return (
-    <section id="about" className="py-20 px-4 bg-secondary/10">
+  return <section id="about" className="py-20 px-4 bg-secondary/10">
       <div className="max-w-4xl mx-auto animate-fade-in">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -37,17 +34,11 @@ const About = () => {
                 algorithm challenges, and helping other developers grow their skills.
               </p>
 
-              <p>
-                My approach to development focuses on creating sustainable, well-crafted solutions 
-                that provide real value to users. I'm always excited to collaborate on projects 
-                that challenge me to learn and grow.
-              </p>
+              <p></p>
             </div>
           </CardContent>
         </Card>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
