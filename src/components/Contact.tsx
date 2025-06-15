@@ -1,7 +1,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Youtube, Mail, Twitter } from "lucide-react";
+import { Github, Linkedin, Youtube, Mail, Twitter, Twitch } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -58,6 +58,15 @@ const Contact = () => {
           >
             <Twitter className="w-6 h-6" />
           </a>
+          <a
+            href="https://www.twitch.tv/sofiabargues"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-4 rounded-full border border-border hover:bg-accent transition-all duration-300 hover:scale-110"
+            aria-label="Twitch"
+          >
+            <Twitch className="w-6 h-6" />
+          </a>
         </div>
       </div>
     </section>
@@ -65,3 +74,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
