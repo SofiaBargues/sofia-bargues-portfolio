@@ -14,11 +14,7 @@ const About = () => {
         <Card className="group hover:shadow-lg transition-all duration-300">
           <CardContent className="p-8 md:p-12">
             <div className="space-y-6 text-lg leading-relaxed">
-              <p>
-                I'm a frontend web developer based in Croydon, England, with a passion for building 
-                modern, interactive web applications. My journey in tech is driven by curiosity and 
-                a commitment to continuous learning.
-              </p>
+              <p>I'm a frontend web developer based in London, England, with a passion for building modern, interactive web applications. My journey in tech is driven by curiosity and a commitment to continuous learning.</p>
               
               <p>
                 As an active member of the London tech community, I regularly attend conferences like 
