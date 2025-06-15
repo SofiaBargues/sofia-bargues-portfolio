@@ -1,6 +1,7 @@
+
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Youtube, Twitch, Twitter } from "lucide-react";
+import { Github, Youtube, Twitch, X } from "lucide-react";
 
 const Hero = () => {
   // Scroll to Projects section handler
@@ -83,7 +84,7 @@ const Hero = () => {
             rel="noopener noreferrer"
             className="p-3 rounded-full border border-border hover:bg-accent transition-all duration-300 hover:scale-110"
           >
-            <Twitter className="w-6 h-6" />
+            <X className="w-6 h-6" />
           </a>
         </div>
       </div>
