@@ -1,7 +1,6 @@
-
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Youtube } from "lucide-react";
+import { Github, Linkedin, Youtube, Twitch, Twitter } from "lucide-react";
 
 const Hero = () => {
   // Scroll to Projects section handler
@@ -63,20 +62,28 @@ const Hero = () => {
             <Github className="w-6 h-6" />
           </a>
           <a
-            href="https://uk.linkedin.com/in/sofia-bargues"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 rounded-full border border-border hover:bg-accent transition-all duration-300 hover:scale-110"
-          >
-            <Linkedin className="w-6 h-6" />
-          </a>
-          <a
             href="https://www.youtube.com/@sofiabargues"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-full border border-border hover:bg-accent transition-all duration-300 hover:scale-110"
           >
             <Youtube className="w-6 h-6" />
+          </a>
+          <a
+            href="https://www.twitch.tv/sofiabargues"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3 rounded-full border border-border hover:bg-accent transition-all duration-300 hover:scale-110"
+          >
+            <Twitch className="w-6 h-6" />
+          </a>
+          <a
+            href="https://x.com/bargues_sofia"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3 rounded-full border border-border hover:bg-accent transition-all duration-300 hover:scale-110"
+          >
+            <Twitter className="w-6 h-6" />
           </a>
         </div>
       </div>

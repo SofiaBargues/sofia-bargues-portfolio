@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Youtube, Mail, Twitter, Twitch } from "lucide-react";
@@ -18,30 +17,6 @@ const Contact = () => {
         </div>
 
         <div className="flex justify-center gap-6">
-          <a 
-            href="https://github.com/SofiaBargues" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="p-4 rounded-full border border-border hover:bg-accent transition-all duration-300 hover:scale-110"
-          >
-            <Github className="w-6 h-6" />
-          </a>
-          <a 
-            href="https://uk.linkedin.com/in/sofia-bargues" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="p-4 rounded-full border border-border hover:bg-accent transition-all duration-300 hover:scale-110"
-          >
-            <Linkedin className="w-6 h-6" />
-          </a>
-          <a 
-            href="https://www.youtube.com/@sofiabargues" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="p-4 rounded-full border border-border hover:bg-accent transition-all duration-300 hover:scale-110"
-          >
-            <Youtube className="w-6 h-6" />
-          </a>
           <a
             href="mailto:barguessofia@gmail.com"
             className="p-4 rounded-full border border-border hover:bg-accent transition-all duration-300 hover:scale-110"
@@ -58,14 +33,14 @@ const Contact = () => {
           >
             <Twitter className="w-6 h-6" />
           </a>
-          <a
-            href="https://www.twitch.tv/sofiabargues"
-            target="_blank"
+          <a 
+            href="https://uk.linkedin.com/in/sofia-bargues" 
+            target="_blank" 
             rel="noopener noreferrer"
             className="p-4 rounded-full border border-border hover:bg-accent transition-all duration-300 hover:scale-110"
-            aria-label="Twitch"
+            aria-label="LinkedIn"
           >
-            <Twitch className="w-6 h-6" />
+            <Linkedin className="w-6 h-6" />
           </a>
         </div>
       </div>
@@ -74,4 +49,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
