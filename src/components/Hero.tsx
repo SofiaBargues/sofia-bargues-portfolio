@@ -12,6 +12,14 @@ const Hero = () => {
     }
   };
 
+  // Nuevo: Scroll to Contact section handler
+  const handleScrollToContact = () => {
+    const el = document.getElementById("contact");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="min-h-screen flex items-center justify-center px-4 bg-gradient-to-br from-background to-secondary/20">
       <div className="max-w-4xl mx-auto text-center animate-fade-in">
@@ -35,7 +43,12 @@ const Hero = () => {
           >
             View My Work
           </Button>
-          <Button variant="outline" size="lg" className="transition-all duration-300 hover:scale-105">
+          <Button
+            variant="outline"
+            size="lg"
+            className="transition-all duration-300 hover:scale-105"
+            onClick={handleScrollToContact}
+          >
             Get In Touch
           </Button>
         </div>
