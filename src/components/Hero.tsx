@@ -8,21 +8,6 @@ const Hero = () => {
           <span className="font-bold text-2xl tracking-widest">S</span>
         </div>
       </div>
-      
-      {/* Top right WORK nav */}
-      <div className="absolute top-8 right-10 z-20">
-        <span className="font-light text-3xl tracking-tight">WORK</span>
-      </div>
-      
-      {/* ABOUT bottom left */}
-      <div className="absolute bottom-8 left-10 z-20">
-        <span className="font-light text-3xl tracking-tight">ABOUT</span>
-      </div>
-      
-      {/* CONTACT bottom right */}
-      <div className="absolute bottom-8 right-10 z-20">
-        <span className="font-light text-3xl tracking-tight">CONTACT</span>
-      </div>
 
       {/* Central name */}
       <div className="relative z-10 flex flex-col items-center select-none">
