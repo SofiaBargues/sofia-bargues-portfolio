@@ -8,7 +8,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-[#e6e6e6] overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center  border-b-2 bg-[#e6e6e6] overflow-hidden">
       {/* Central content with better hierarchy */}
       <div className="relative z-10 flex flex-col items-start text-start max-w-4xl mx-auto px-6 ">
         {/* Introduction text */}
