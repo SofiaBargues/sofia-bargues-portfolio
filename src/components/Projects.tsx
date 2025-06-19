@@ -3,23 +3,31 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Github } from "lucide-react";
+
 const Projects = () => {
-  const projects = [{
-    title: "Memory Palace",
-    description: "AI-powered web app that helps users master memory techniques using the loci method, integrating GPT-4o and DALL-E 3 for an immersive learning experience.",
-    technologies: ["React", "TypeScript", "AI Integration", "OpenAI API"],
-    liveUrl: "https://memorypalace.vercel.app",
-    githubUrl: "https://github.com/SofiaBargues/memory-palace",
-    featured: true
-  }, {
-    title: "Frontend-30",
-    description: "A comprehensive series of 30 coding challenges designed to help developers improve their skills in React, Tailwind CSS, and TypeScript through hands-on practice.",
-    technologies: ["React", "Tailwind CSS", "TypeScript", "Educational Content"],
-    liveUrl: "https://frontend-30.vercel.app/",
-    githubUrl: "https://github.com/SofiaBargues/frontend-30",
-    featured: true
-  }];
-  return <section id="projects" className="py-20 px-4 bg-secondary border-2 border-border rounded-2xl">
+  const projects = [
+    {
+      title: "Memory Palace",
+      description: "AI-powered web app that helps users master memory techniques using the loci method, integrating GPT-4o and DALL-E 3 for an immersive learning experience.",
+      technologies: ["React", "TypeScript", "AI Integration", "OpenAI API"],
+      liveUrl: "https://memorypalace.vercel.app",
+      githubUrl: "https://github.com/SofiaBargues/memory-palace",
+      featured: true,
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=400&fit=crop"
+    },
+    {
+      title: "Frontend-30",
+      description: "A comprehensive series of 30 coding challenges designed to help developers improve their skills in React, Tailwind CSS, and TypeScript through hands-on practice.",
+      technologies: ["React", "Tailwind CSS", "TypeScript", "Educational Content"],
+      liveUrl: "https://frontend-30.vercel.app/",
+      githubUrl: "https://github.com/SofiaBargues/frontend-30",
+      featured: true,
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=400&fit=crop"
+    }
+  ];
+
+  return (
+    <section id="projects" className="py-20 px-4 bg-secondary border-2 border-border rounded-2xl">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
@@ -31,15 +39,31 @@ const Projects = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {projects.map((project, index) => <Card key={project.title} style={{
-          animationDelay: `${index * 0.2}s`
-        }} className="border-2 border-border rounded-xl bg-card">
+          {projects.map((project, index) => (
+            <Card 
+              key={project.title} 
+              style={{ animationDelay: `${index * 0.2}s` }} 
+              className="border-2 border-border rounded-xl bg-card overflow-hidden"
+            >
+              {/* Project Image */}
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              
               <CardHeader>
                 <div className="flex items-start justify-between">
                   <div>
                     <CardTitle className="text-xl mb-2 group-hover:text-primary transition-colors text-foreground">
                       {project.title}
-                      {project.featured && <Badge variant="secondary" className="ml-2 rounded-xl border-2 border-border">Featured</Badge>}
+                      {project.featured && (
+                        <Badge variant="secondary" className="ml-2 rounded-xl border-2 border-border">
+                          Featured
+                        </Badge>
+                      )}
                     </CardTitle>
                     <CardDescription className="text-base leading-relaxed">
                       {project.description}
@@ -47,21 +71,26 @@ const Projects = () => {
                   </div>
                 </div>
               </CardHeader>
+              
               <CardContent>
                 <div className="mb-4">
                   <div className="flex flex-wrap gap-2">
-                    {project.technologies.map(tech => <Badge key={tech} variant="outline" className="text-xs rounded-xl border-2 border-border">
+                    {project.technologies.map(tech => (
+                      <Badge key={tech} variant="outline" className="text-xs rounded-xl border-2 border-border">
                         {tech}
-                      </Badge>)}
+                      </Badge>
+                    ))}
                   </div>
                 </div>
                 <div className="flex gap-3">
                   {/* Mostrar View Live solo si existe el liveUrl */}
-                  {project.liveUrl && <Button size="sm" asChild className="rounded-xl border-2 border-border">
+                  {project.liveUrl && (
+                    <Button size="sm" asChild className="rounded-xl border-2 border-border">
                       <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                         View Live
                       </a>
-                    </Button>}
+                    </Button>
+                  )}
                   <Button variant="outline" size="sm" asChild className="rounded-xl border-2 border-border">
                     <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                       <Github className="w-4 h-4 mr-2" />
@@ -70,9 +99,12 @@ const Projects = () => {
                   </Button>
                 </div>
               </CardContent>
-            </Card>)}
+            </Card>
+          ))}
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Projects;
