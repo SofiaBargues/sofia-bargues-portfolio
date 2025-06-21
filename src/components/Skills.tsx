@@ -1,11 +1,11 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { 
-  Atom, 
-  FileType, 
-  Triangle, 
+  Code2, 
+  FileCode, 
+  TriangleRight, 
   Palette, 
-  FileText, 
+  Braces, 
   Server, 
   GitBranch, 
   Zap 
@@ -15,17 +15,17 @@ const Skills = () => {
   const skills = [
     {
       name: "React",
-      icon: Atom,
+      icon: Code2,
       description: "Building modern user interfaces"
     },
     {
       name: "TypeScript",
-      icon: FileType,
+      icon: FileCode,
       description: "Type-safe JavaScript development"
     },
     {
       name: "Next.js",
-      icon: Triangle,
+      icon: TriangleRight,
       description: "Full-stack React framework"
     },
     {
@@ -35,7 +35,7 @@ const Skills = () => {
     },
     {
       name: "JavaScript",
-      icon: FileText,
+      icon: Braces,
       description: "Core web development language"
     },
     {
