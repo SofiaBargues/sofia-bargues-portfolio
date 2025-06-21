@@ -1,55 +1,56 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import { 
-  Atom, 
-  FileCode, 
-  TriangleRight, 
-  Palette, 
-  Braces, 
-  Server, 
-  GitBranch, 
-  Zap 
-} from "lucide-react";
+  SiReact, 
+  SiTypescript, 
+  SiNextdotjs, 
+  SiTailwindcss, 
+  SiJavascript, 
+  SiNodedotjs, 
+  SiGit, 
+  SiVercel 
+} from "react-icons/si";
 
 const Skills = () => {
   const skills = [
     {
       name: "React",
-      icon: Atom,
+      icon: SiReact,
       description: "Building modern user interfaces"
     },
     {
       name: "TypeScript",
-      icon: FileCode,
+      icon: SiTypescript,
       description: "Type-safe JavaScript development"
     },
     {
       name: "Next.js",
-      icon: TriangleRight,
+      icon: SiNextdotjs,
       description: "Full-stack React framework"
     },
     {
       name: "Tailwind CSS",
-      icon: Palette,
+      icon: SiTailwindcss,
       description: "Utility-first CSS framework"
     },
     {
       name: "JavaScript",
-      icon: Braces,
+      icon: SiJavascript,
       description: "Core web development language"
     },
     {
       name: "Node.js",
-      icon: Server,
+      icon: SiNodedotjs,
       description: "Backend JavaScript runtime"
     },
     {
       name: "Git",
-      icon: GitBranch,
+      icon: SiGit,
       description: "Version control system"
     },
     {
       name: "Vercel",
-      icon: Zap,
+      icon: SiVercel,
       description: "Deployment and hosting platform"
     }
   ];
