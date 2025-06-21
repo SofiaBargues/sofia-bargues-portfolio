@@ -1,7 +1,6 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { 
-  Code2, 
+  Atom, 
   FileCode, 
   TriangleRight, 
   Palette, 
@@ -15,7 +14,7 @@ const Skills = () => {
   const skills = [
     {
       name: "React",
-      icon: Code2,
+      icon: Atom,
       description: "Building modern user interfaces"
     },
     {
