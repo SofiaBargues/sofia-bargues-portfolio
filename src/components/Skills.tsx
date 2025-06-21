@@ -1,4 +1,5 @@
 
+
 import { Card, CardContent } from "@/components/ui/card";
 import { 
   SiReact, 
@@ -8,7 +9,9 @@ import {
   SiJavascript, 
   SiNodedotjs, 
   SiGit, 
-  SiVercel 
+  SiVercel,
+  SiMui,
+  SiFigma
 } from "react-icons/si";
 
 const Skills = () => {
@@ -52,6 +55,16 @@ const Skills = () => {
       name: "Vercel",
       icon: SiVercel,
       description: "Deployment and hosting platform"
+    },
+    {
+      name: "Material-UI",
+      icon: SiMui,
+      description: "React component library"
+    },
+    {
+      name: "Figma",
+      icon: SiFigma,
+      description: "Design and prototyping tool"
     }
   ];
 
@@ -93,3 +106,4 @@ const Skills = () => {
 };
 
 export default Skills;
+
