@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 const About = () => {
   return <section id="about" className="py-20 px-4 bg-secondary  border-b-2">
@@ -20,12 +19,10 @@ const About = () => {
 I love learning new things and sharing what I learn online. You can follow my journey on LinkedIn.
             </p>
 
-              <p>
-                I also enjoy doing fun coding challenges.
-                ⏳ These days, I'm solving one LeetCode problem every day live on Twitch and sharing some solutions on YouTube.
-                ✅ Last year, I redesigned 30 local business websites in 30 days using React and Tailwind.
-                ✅ I also finished 30 web projects in 30 days, following tutorials with React, Tailwind, Next.js, and TypeScript.
-              </p>
+              <p>I also enjoy doing fun coding challenges. 
+⏳ These days, I'm solving one LeetCode problem every day live on Twitch and sharing some solutions on YouTube. 
+✅ Last year, I redesigned 30 local business websites in 30 days using React and Tailwind. 
+✅ I also finished 30 web projects in 30 days, following tutorials with React, Tailwind, Next.js, and TypeScript.</p>
 
               <p>
 I love to learn by building. All my projects are open source on GitHub and show what I've learned so far.
