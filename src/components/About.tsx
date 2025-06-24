@@ -1,4 +1,7 @@
+
 import { Card, CardContent } from "@/components/ui/card";
+import { Clock, CheckCircle, Twitch, Youtube, Github } from "lucide-react";
+
 const About = () => {
   return <section id="about" className="py-20 px-4 bg-secondary  border-b-2">
       <div className="max-w-4xl mx-auto animate-fade-in">
@@ -19,20 +22,30 @@ const About = () => {
 I love learning new things and sharing what I learn online. You can follow my journey on LinkedIn.
             </p>
 
-              <p className="text-left">I also enjoy doing fun coding challenges. 
-⏳ These days, I'm solving one LeetCode problem every day live on Twitch and sharing some solutions on YouTube. 
-✅ Last year, I redesigned 30 local business websites in 30 days using React and Tailwind. 
-✅ I also finished 30 web projects in 30 days, following tutorials with React, Tailwind, Next.js, and TypeScript.</p>
+              <p className="text-left">I also enjoy doing fun coding challenges.</p>
+              
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <Clock className="w-5 h-5 mt-1 text-muted-foreground flex-shrink-0" />
+                  <span>These days, I'm solving one LeetCode problem every day live on Twitch and sharing some solutions on YouTube.</span>
+                </div>
+                
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 mt-1 text-muted-foreground flex-shrink-0" />
+                  <span>Last year, I redesigned 30 local business websites in 30 days using React and Tailwind.</span>
+                </div>
+                
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 mt-1 text-muted-foreground flex-shrink-0" />
+                  <span>I also finished 30 web projects in 30 days, following tutorials with React, Tailwind, Next.js, and TypeScript.</span>
+                </div>
+              </div>
 
               <p>
 I love to learn by building. All my projects are open source on GitHub and show what I've learned so far.
 
 I'm excited to keep growing and take everything I've learned to the next level!
-
-
             </p>
-
-              <p></p>
             </div>
           </CardContent>
         </Card>
