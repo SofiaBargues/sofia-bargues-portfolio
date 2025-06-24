@@ -1,7 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 const About = () => {
-  return (
-    <section id="about" className="py-20 px-4 bg-secondary  border-b-2">
+  return <section id="about" className="py-20 px-4 bg-secondary  border-b-2">
       <div className="max-w-4xl mx-auto animate-fade-in">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
@@ -15,12 +14,10 @@ const About = () => {
         <Card className="group hover:shadow-lg transition-all duration-300 border-2 border-border rounded-xl bg-card">
           <CardContent className="p-8 md:p-12">
             <div className="space-y-6 text-lg leading-relaxed text-foreground">
-              <p>
-                I'm a frontend web developer based in London, England, with a
-                passion for building modern, interactive web applications. My
-                journey in tech is driven by curiosity and a commitment to
-                continuous learning.
-              </p>
+              <p>Hi! I’m Sofía.
+
+I love learning new things and sharing what I learn online. You can follow my journey on LinkedIn.
+            </p>
 
               <p>
                 As an active member of the London tech community, I regularly
@@ -35,18 +32,18 @@ const About = () => {
               </p>
 
               <p>
-                Beyond coding, I create educational content on YouTube, sharing
-                programming tutorials and problem-solving walkthroughs. I'm
-                particularly passionate about JavaScript, algorithm challenges,
-                and helping other developers grow their skills.
-              </p>
+I love to learn by building. All my projects are open source on GitHub and show what I’ve learned so far.
+
+I'm excited to keep growing and take everything I’ve learned to the next level!
+
+
+            </p>
 
               <p></p>
             </div>
           </CardContent>
         </Card>
       </div>
-    </section>
-  );
+    </section>;
 };
 export default About;
