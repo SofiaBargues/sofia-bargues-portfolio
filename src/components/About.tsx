@@ -1,17 +1,10 @@
+
 import { Card, CardContent } from "@/components/ui/card";
+import { Clock, CheckCircle, Twitch, Youtube, Github } from "lucide-react";
+
 import React, { useEffect, useState } from "react";
 const About = () => {
-  const [repoCount, setRepoCount] = useState(0);
-
-  useEffect(() => {
-    fetch("https://api.github.com/users/SofiaBargues")
-      .then((response) => response.json())
-      .then((data) => setRepoCount(data.public_repos))
-      .catch((error) => console.error("Error fetching repo count:", error));
-  }, []);
-
-  return (
-    <section id="about" className="py-20 px-4 bg-secondary  border-b-2">
+  return <section id="about" className="py-20 px-4 bg-secondary  border-b-2">
       <div className="max-w-4xl mx-auto animate-fade-in">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
@@ -107,11 +100,39 @@ const About = () => {
                 and show what I’ve learned so far. I'm excited to keep growing
                 and take everything I’ve learned to the next level!
               </p>
+              <p>Hi! I'm Sofía.
+
+I love learning new things and sharing what I learn online. You can follow my journey on LinkedIn.
+            </p>
+
+              <p className="text-left">I also enjoy doing fun coding challenges.</p>
+              
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <Clock className="w-5 h-5 mt-1 text-muted-foreground flex-shrink-0" />
+                  <span>These days, I'm solving one LeetCode problem every day live on Twitch and sharing some solutions on YouTube.</span>
+                </div>
+                
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 mt-1 text-muted-foreground flex-shrink-0" />
+                  <span>Last year, I redesigned 30 local business websites in 30 days using React and Tailwind.</span>
+                </div>
+                
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 mt-1 text-muted-foreground flex-shrink-0" />
+                  <span>I also finished 30 web projects in 30 days, following tutorials with React, Tailwind, Next.js, and TypeScript.</span>
+                </div>
+              </div>
+
+              <p>
+I love to learn by building. All my projects are open source on GitHub and show what I've learned so far.
+
+I'm excited to keep growing and take everything I've learned to the next level!
+            </p>
             </div>
           </CardContent>
         </Card>
       </div>
-    </section>
-  );
+    </section>;
 };
 export default About;

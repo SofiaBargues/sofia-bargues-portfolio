@@ -1,3 +1,5 @@
+
+
 import { Card, CardContent } from "@/components/ui/card";
 import {
   SiReact,
@@ -17,7 +19,7 @@ const Skills = () => {
     {
       name: "React",
       icon: SiReact,
-      description: "Building modern user interfaces",
+      description: "Declarative UI library"
     },
     {
       name: "TypeScript",
