@@ -2,12 +2,21 @@ import { Card, CardContent } from "@/components/ui/card";
 import React, { useEffect, useState } from "react";
 const About = () => {
   const [repoCount, setRepoCount] = useState(0);
+  const [dayOfYear, setDayOfYear] = useState(0);
 
   useEffect(() => {
     fetch("https://api.github.com/users/SofiaBargues")
       .then((response) => response.json())
       .then((data) => setRepoCount(data.public_repos))
       .catch((error) => console.error("Error fetching repo count:", error));
+
+    // Calculate the day of the year
+    const now = new Date();
+    const start = new Date(now.getFullYear(), 0, 0);
+    const diff = now - start;
+    const oneDay = 1000 * 60 * 60 * 24;
+    const day = Math.floor(diff / oneDay);
+    setDayOfYear(day);
   }, []);
 
   return (
@@ -41,8 +50,9 @@ const About = () => {
 
               <p>
                 I also enjoy doing fun coding challenges:
-                <br />⏳ These days, I’m solving one LeetCode problem every day
-                live on{" "}
+                <br />⏳ I’m solving one LeetCode problem every day, and I'm on
+                day <span className="font-bold">{dayOfYear}</span> of 365 live
+                on{" "}
                 <a
                   href="https://www.twitch.tv/sofiabargues"
                   target="_blank"
