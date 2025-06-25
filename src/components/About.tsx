@@ -1,5 +1,15 @@
 import { Card, CardContent } from "@/components/ui/card";
+import React, { useEffect, useState } from "react";
 const About = () => {
+  const [repoCount, setRepoCount] = useState(0);
+
+  useEffect(() => {
+    fetch("https://api.github.com/users/SofiaBargues")
+      .then((response) => response.json())
+      .then((data) => setRepoCount(data.public_repos))
+      .catch((error) => console.error("Error fetching repo count:", error));
+  }, []);
+
   return (
     <section id="about" className="py-20 px-4 bg-secondary  border-b-2">
       <div className="max-w-4xl mx-auto animate-fade-in">
@@ -16,32 +26,87 @@ const About = () => {
           <CardContent className="p-8 md:p-12">
             <div className="space-y-6 text-lg leading-relaxed text-foreground">
               <p>
-                I'm a frontend web developer based in London, England, with a
-                passion for building modern, interactive web applications. My
-                journey in tech is driven by curiosity and a commitment to
-                continuous learning.
+                Hi! I’m Sofía. I love learning new things and sharing what I
+                learn online. You can follow my journey on{" "}
+                <a
+                  href="https://www.linkedin.com/in/sofia-bargues/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-500 underline"
+                >
+                  LinkedIn
+                </a>
+                .
               </p>
 
               <p>
-                As an active member of the London tech community, I regularly
-                attend conferences like React Advanced and contribute to
-                open-source projects. I believe in the power of education and
-                knowledge sharing, which led me to create projects like{" "}
-                <span className="font-semibold text-primary">
-                  Memory Palace
-                </span>{" "}
-                and{" "}
-                <span className="font-semibold text-primary">frontend-30</span>.
+                I also enjoy doing fun coding challenges:
+                <br />⏳ These days, I’m solving one LeetCode problem every day
+                live on{" "}
+                <a
+                  href="https://www.twitch.tv/sofiabargues"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-500 underline"
+                >
+                  Twitch
+                </a>{" "}
+                and sharing some solutions on{" "}
+                <a
+                  href="https://www.youtube.com/@sofiabargues"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-500 underline"
+                >
+                  YouTube
+                </a>
+                .
+                <br />✅ Last year, I{" "}
+                <a
+                  href="https://30-days-30-redesign.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-500 underline"
+                >
+                  redesigned 30 local business websites
+                </a>{" "}
+                in 30 days using React and Tailwind.
+                <br />✅ I also finished{" "}
+                <a
+                  href="https://days-of-code.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-500 underline"
+                >
+                  30 web projects in 30 days
+                </a>
+                , following{" "}
+                <a
+                  href="https://30projects30days.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-500 underline"
+                >
+                  tutorials
+                </a>{" "}
+                with React, Tailwind, Next.js, and TypeScript.
               </p>
 
               <p>
-                Beyond coding, I create educational content on YouTube, sharing
-                programming tutorials and problem-solving walkthroughs. I'm
-                particularly passionate about JavaScript, algorithm challenges,
-                and helping other developers grow their skills.
+                I love to learn by building. My{" "}
+                <span className="font-bold  ">{repoCount}</span> repos are open
+                source on{" "}
+                <a
+                  href="https://github.com/SofiaBargues"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-500 underline"
+                >
+                  GitHub
+                </a>{" "}
+                and show what I’ve learned so far. I'm excited to keep growing
+                and take everything I’ve learned to the next level!
               </p>
-
-              <p></p>
             </div>
           </CardContent>
         </Card>
