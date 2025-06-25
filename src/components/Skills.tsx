@@ -1,17 +1,16 @@
 
-
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  SiReact,
-  SiTypescript,
-  SiNextdotjs,
-  SiTailwindcss,
-  SiJavascript,
-  SiNodedotjs,
-  SiGit,
+import { 
+  SiReact, 
+  SiTypescript, 
+  SiNextdotjs, 
+  SiTailwindcss, 
+  SiJavascript, 
+  SiNodedotjs, 
+  SiGit, 
   SiVercel,
   SiMui,
-  SiFigma,
+  SiFigma
 } from "react-icons/si";
 
 const Skills = () => {
@@ -24,48 +23,48 @@ const Skills = () => {
     {
       name: "TypeScript",
       icon: SiTypescript,
-      description: "Type-safe JavaScript development",
+      description: "Type-safe JavaScript development"
     },
     {
       name: "Next.js",
       icon: SiNextdotjs,
-      description: "Full-stack React framework",
+      description: "Full-stack React framework"
     },
     {
       name: "Tailwind CSS",
       icon: SiTailwindcss,
-      description: "Utility-first CSS framework",
+      description: "Utility-first CSS framework"
     },
     {
       name: "JavaScript",
       icon: SiJavascript,
-      description: "Core web development language",
+      description: "Core web development language"
     },
     {
       name: "Node.js",
       icon: SiNodedotjs,
-      description: "Backend JavaScript runtime",
+      description: "Backend JavaScript runtime"
     },
     {
       name: "Git",
       icon: SiGit,
-      description: "Version control system",
+      description: "Version control system"
     },
     {
       name: "Vercel",
       icon: SiVercel,
-      description: "Deployment and hosting platform",
+      description: "Deployment and hosting platform"
     },
     {
       name: "Material-UI",
       icon: SiMui,
-      description: "React component library",
+      description: "React component library"
     },
     {
       name: "Figma",
       icon: SiFigma,
-      description: "Design and prototyping tool",
-    },
+      description: "Design and prototyping tool"
+    }
   ];
 
   return (
@@ -80,12 +79,12 @@ const Skills = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {skills.map((skill, index) => {
             const IconComponent = skill.icon;
             return (
-              <Card
-                key={skill.name}
+              <Card 
+                key={skill.name} 
                 className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-slide-in-left border-2 border-border rounded-xl bg-card"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
@@ -93,12 +92,8 @@ const Skills = () => {
                   <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300 flex justify-center">
                     <IconComponent size={32} className="text-foreground" />
                   </div>
-                  <h3 className="font-semibold text-lg mb-2 text-foreground">
-                    {skill.name}
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    {skill.description}
-                  </p>
+                  <h3 className="font-semibold text-lg mb-2 text-foreground">{skill.name}</h3>
+                  <p className="text-sm text-muted-foreground">{skill.description}</p>
                 </CardContent>
               </Card>
             );
