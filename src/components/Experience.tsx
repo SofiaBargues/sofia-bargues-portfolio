@@ -14,7 +14,7 @@ const Experience = () => {
         "Coordinated task prioritization across 4-member team, delivering project on schedule with excellent stakeholder feedback.",
         "Tracked progress via public board with regular updates, maintaining 100% alignment with project requirements."
       ],
-      technologies: ["Figma", "UI/UX Design", "Team Coordination", "Project Management"]
+      technologies: ["Figma", "UI/UX Design", "MUI React"]
     }
   ];
 

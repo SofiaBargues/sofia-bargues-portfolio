@@ -53,11 +53,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-
-      {/* SCROLL DOWN indicator */}
-      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-20 text-center text-base tracking-wide">
-        SCROLL DOWN <span className="ml-2">↓</span>
-      </div>
     </section>
   );
 };
