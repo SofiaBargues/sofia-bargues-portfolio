@@ -18,7 +18,7 @@ const About = () => {
             About Me
           </h2>
           <p className="text-xl text-muted-foreground">
-            Passionate about creating meaningful digital experiences
+            Coding, Playing, and Learning Every Day
           </p>
         </div>
 
@@ -61,14 +61,14 @@ const About = () => {
                   YouTube
                 </a>
                 .
-                <br />✅ Last year, I{" "}
+                <br />✅ Last year, I redesigned 30{" "}
                 <a
                   href="https://30-days-30-redesign.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-500 underline"
                 >
-                  redesigned 30 local business websites
+                  local business websites
                 </a>{" "}
                 in 30 days using React and Tailwind.
                 <br />✅ I also finished{" "}
@@ -78,9 +78,9 @@ const About = () => {
                   rel="noopener noreferrer"
                   className="text-blue-500 underline"
                 >
-                  30 web projects in 30 days
-                </a>
-                , following{" "}
+                  30 web projects
+                </a>{" "}
+                in 30 days, following{" "}
                 <a
                   href="https://30projects30days.vercel.app/"
                   target="_blank"

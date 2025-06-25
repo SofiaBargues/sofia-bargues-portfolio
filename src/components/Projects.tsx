@@ -1,29 +1,42 @@
-
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Github } from "lucide-react";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const Projects = () => {
   const projects = [
     {
       title: "Memory Palace",
-      description: "AI-powered web app that helps users master memory techniques using the loci method, integrating GPT-4o and DALL-E 3 for an immersive learning experience.",
+      description:
+        "AI-powered web app that helps users master memory techniques using the loci method, integrating GPT-4o and DALL-E 3 for an immersive learning experience.",
       technologies: ["React", "TypeScript", "AI Integration", "OpenAI API"],
       liveUrl: "https://memorypalace.vercel.app",
       githubUrl: "https://github.com/SofiaBargues/memory-palace",
       featured: true,
-      image: "/lovable-uploads/39e48df3-76e2-43de-a3f0-74a0d1da9b35.png"
+      image: "/lovable-uploads/39e48df3-76e2-43de-a3f0-74a0d1da9b35.png",
     },
     {
       title: "Frontend-30",
-      description: "A comprehensive series of 30 coding challenges designed to help developers improve their skills in React, Tailwind CSS, and TypeScript through hands-on practice.",
-      technologies: ["React", "Tailwind CSS", "TypeScript", "Educational Content"],
+      description:
+        "A comprehensive series of 30 coding challenges designed to help developers improve their skills in React, Tailwind CSS, and TypeScript through hands-on practice.",
+      technologies: [
+        "React",
+        "Tailwind CSS",
+        "TypeScript",
+        "Educational Content",
+      ],
       liveUrl: "https://frontend-30.vercel.app/",
       githubUrl: "https://github.com/SofiaBargues/frontend-30",
       featured: true,
-      image: "/lovable-uploads/c407bb29-e3f1-41fb-8520-5041073a989c.png"
-    }
+      image: "/lovable-uploads/c407bb29-e3f1-41fb-8520-5041073a989c.png",
+    },
   ];
 
   return (
@@ -34,33 +47,38 @@ const Projects = () => {
             Featured Projects
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            A selection of projects that showcase my skills and passion for creating exceptional web experiences
+            A selection of projects that showcase my skills and passion for
+            creating exceptional web experiences
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <Card 
-              key={project.title} 
-              style={{ animationDelay: `${index * 0.2}s` }} 
+            <Card
+              key={project.title}
+              style={{ animationDelay: `${index * 0.2}s` }}
               className="border-2 border-border rounded-xl bg-card overflow-hidden"
             >
               {/* Project Image */}
-              <div className="relative h-48 overflow-hidden">
-                <img 
-                  src={project.image} 
+              <div className="overflow-hidden">
+                <img
+                  src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  className="w-full h-auto object-contain"
+                  // className="w-full h-auto object-contain hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              
+
               <CardHeader>
                 <div className="flex items-start justify-between">
                   <div>
                     <CardTitle className="text-xl mb-2 group-hover:text-primary transition-colors text-foreground">
                       {project.title}
                       {project.featured && (
-                        <Badge variant="secondary" className="ml-2 rounded-xl border-2 border-border">
+                        <Badge
+                          variant="secondary"
+                          className="ml-2 rounded-xl border-2 border-border"
+                        >
                           Featured
                         </Badge>
                       )}
@@ -71,12 +89,16 @@ const Projects = () => {
                   </div>
                 </div>
               </CardHeader>
-              
+
               <CardContent>
                 <div className="mb-4">
                   <div className="flex flex-wrap gap-2">
-                    {project.technologies.map(tech => (
-                      <Badge key={tech} variant="outline" className="text-xs rounded-xl border-2 border-border">
+                    {project.technologies.map((tech) => (
+                      <Badge
+                        key={tech}
+                        variant="outline"
+                        className="text-xs rounded-xl border-2 border-border"
+                      >
                         {tech}
                       </Badge>
                     ))}
@@ -85,14 +107,31 @@ const Projects = () => {
                 <div className="flex gap-3">
                   {/* Mostrar View Live solo si existe el liveUrl */}
                   {project.liveUrl && (
-                    <Button size="sm" asChild className="rounded-xl border-2 border-border">
-                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                    <Button
+                      size="sm"
+                      asChild
+                      className="rounded-xl border-2 border-border"
+                    >
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         View Live
                       </a>
                     </Button>
                   )}
-                  <Button variant="outline" size="sm" asChild className="rounded-xl border-2 border-border">
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    asChild
+                    className="rounded-xl border-2 border-border"
+                  >
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <Github className="w-4 h-4 mr-2" />
                       Code
                     </a>
