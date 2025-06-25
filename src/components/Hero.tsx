@@ -46,7 +46,7 @@ const Hero = () => {
         <div className="flex-shrink-0">
           <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-border shadow-lg">
             <img 
-              src="https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=400&h=400&fit=crop&crop=face"
+              src="/lovable-uploads/eb8c0904-bf9a-44f8-ab1d-ac1c678ed187.png"
               alt="Sofia Bargues"
               className="w-full h-full object-cover"
             />
