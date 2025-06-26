@@ -19,7 +19,7 @@ const About = () => {
     // Calculate the day of the year
     const now = new Date();
     const start = new Date(now.getFullYear(), 0, 0);
-    const diff = now - start;
+    const diff = Number(now) - Number(start);
     const oneDay = 1000 * 60 * 60 * 24;
     const day = Math.floor(diff / oneDay);
     setDayOfYear(day);
@@ -76,158 +76,152 @@ const About = () => {
                   <span className="underline decoration-wavy decoration-muted">fun coding challenges</span>:
                 </p>
 
-                <div className="relative">
-                  {/* Timeline Line */}
-                  <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-border"></div>
+                <div className="relative pl-8">
+                  {/* Timeline Line - Positioned to align with dots */}
+                  <div className="absolute left-3 top-2 bottom-0 w-0.5 bg-border"></div>
 
                   {/* Timeline Items */}
                   <div className="space-y-8">
                     {/* Currently Working - Most Important */}
-                    <div className="relative flex items-start gap-6">
-                      <div className="relative z-10 flex-shrink-0">
-                        <div className="w-4 h-4 bg-primary border-2 border-primary rounded-full"></div>
-                        <div className="absolute inset-0.5 w-3 h-3 bg-background rounded-full animate-pulse"></div>
+                    <div className="relative">
+                      <div className="absolute -left-5 top-2 z-10 flex-shrink-0">
+                        <div className="w-3 h-3 bg-primary border-2 border-primary rounded-full"></div>
+                        <div className="absolute inset-0.5 w-2 h-2 bg-background rounded-full animate-pulse"></div>
                       </div>
 
-                      <div className="flex-1 pb-2">
-                        <div className="bg-primary text-primary-foreground border-l-4 border-primary pl-4 pr-4 py-4 rounded-r-lg shadow-lg">
-                          <div className="mb-2">
-                            <span className="font-bold">Currently:</span>
-                          </div>
-                          <p className="text-base leading-7">
-                            <Clock className="w-4 h-4 inline mr-2 animate-pulse" />
-                            I'm solving one LeetCode problem every day, and I'm on day{" "}
-                            <Tooltip>
-                              <TooltipTrigger asChild>
-                                <span className="font-black text-primary bg-primary-foreground px-3 py-1 rounded-full cursor-help border-2 border-primary-foreground">
-                                  {dayOfYear}
-                                </span>
-                              </TooltipTrigger>
-                              <TooltipContent>
-                                <p>Current streak: {dayOfYear} consecutive days! 🔥</p>
-                              </TooltipContent>
-                            </Tooltip>{" "}
-                            of 365 live on{" "}
-                            <Tooltip>
-                              <TooltipTrigger asChild>
-                                <a
-                                  href="https://www.twitch.tv/sofiabargues"
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="font-bold underline decoration-2 hover:decoration-muted transition-colors"
-                                >
-                                  Twitch
-                                </a>
-                              </TooltipTrigger>
-                              <TooltipContent>
-                                <p>Watch me solve problems live!</p>
-                              </TooltipContent>
-                            </Tooltip>{" "}
-                            and sharing some solutions on{" "}
-                            <Tooltip>
-                              <TooltipTrigger asChild>
-                                <a
-                                  href="https://www.youtube.com/@sofiabargues"
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="font-bold underline decoration-2 hover:decoration-muted transition-colors"
-                                >
-                                  YouTube
-                                </a>
-                              </TooltipTrigger>
-                              <TooltipContent>
-                                <p>Check out my coding tutorials</p>
-                              </TooltipContent>
-                            </Tooltip>
-                            .
-                          </p>
+                      <div className="bg-primary text-primary-foreground border-l-4 border-primary pl-4 pr-4 py-4 rounded-r-lg shadow-lg">
+                        <div className="mb-2">
+                          <span className="font-bold">Currently:</span>
                         </div>
+                        <p className="text-base leading-7">
+                          <Clock className="w-4 h-4 inline mr-2 animate-pulse" />
+                          I'm solving one LeetCode problem every day, and I'm on day{" "}
+                          <Tooltip>
+                            <TooltipTrigger asChild>
+                              <span className="font-black text-primary bg-primary-foreground px-3 py-1 rounded-full cursor-help border-2 border-primary-foreground">
+                                {dayOfYear}
+                              </span>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                              <p>Current streak: {dayOfYear} consecutive days! 🔥</p>
+                            </TooltipContent>
+                          </Tooltip>{" "}
+                          of 365 live on{" "}
+                          <Tooltip>
+                            <TooltipTrigger asChild>
+                              <a
+                                href="https://www.twitch.tv/sofiabargues"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="font-bold underline decoration-2 hover:decoration-muted transition-colors"
+                              >
+                                Twitch
+                              </a>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                              <p>Watch me solve problems live!</p>
+                            </TooltipContent>
+                          </Tooltip>{" "}
+                          and sharing some solutions on{" "}
+                          <Tooltip>
+                            <TooltipTrigger asChild>
+                              <a
+                                href="https://www.youtube.com/@sofiabargues"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="font-bold underline decoration-2 hover:decoration-muted transition-colors"
+                              >
+                                YouTube
+                              </a>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                              <p>Check out my coding tutorials</p>
+                            </TooltipContent>
+                          </Tooltip>
+                          .
+                        </p>
                       </div>
                     </div>
 
                     {/* Completed Item 1 */}
-                    <div className="relative flex items-start gap-6">
-                      <div className="relative z-10 flex-shrink-0">
+                    <div className="relative">
+                      <div className="absolute -left-5 top-2 z-10 flex-shrink-0">
                         <div className="w-3 h-3 bg-muted rounded-full"></div>
                       </div>
 
-                      <div className="flex-1 pb-2">
-                        <div className="bg-secondary border-l-4 border-muted pl-4 pr-4 py-3 rounded-r-lg">
-                          <div className="mb-2">
-                            <span className="font-medium text-muted-foreground">Completed:</span>
-                          </div>
-                          <p className="text-base text-foreground leading-7">
-                            <CheckCircle className="w-4 h-4 text-muted-foreground inline mr-2" />
-                            Last year, I redesigned{" "}
-                            <Tooltip>
-                              <TooltipTrigger asChild>
-                                <a
-                                  href="https://30-days-30-redesign.vercel.app/"
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="font-bold text-primary bg-muted px-2 py-1 rounded cursor-help underline decoration-wavy decoration-muted-foreground"
-                                >
-                                  30 local business websites
-                                </a>
-                              </TooltipTrigger>
-                              <TooltipContent>
-                                <p>Built with React and Tailwind CSS</p>
-                              </TooltipContent>
-                            </Tooltip>{" "}
-                            in <span className="font-medium bg-muted px-2 py-1 rounded">30 days</span> using React and Tailwind.
-                          </p>
+                      <div className="bg-secondary border-l-4 border-muted pl-4 pr-4 py-3 rounded-r-lg">
+                        <div className="mb-2">
+                          <span className="font-medium text-muted-foreground">Completed:</span>
                         </div>
+                        <p className="text-base text-foreground leading-7">
+                          <CheckCircle className="w-4 h-4 text-muted-foreground inline mr-2" />
+                          Last year, I redesigned{" "}
+                          <Tooltip>
+                            <TooltipTrigger asChild>
+                              <a
+                                href="https://30-days-30-redesign.vercel.app/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="font-bold text-primary bg-muted px-2 py-1 rounded cursor-help underline decoration-wavy decoration-muted-foreground"
+                              >
+                                30 local business websites
+                              </a>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                              <p>Built with React and Tailwind CSS</p>
+                            </TooltipContent>
+                          </Tooltip>{" "}
+                          in <span className="font-medium bg-muted px-2 py-1 rounded">30 days</span> using React and Tailwind.
+                        </p>
                       </div>
                     </div>
 
                     {/* Completed Item 2 */}
-                    <div className="relative flex items-start gap-6">
-                      <div className="relative z-10 flex-shrink-0">
+                    <div className="relative">
+                      <div className="absolute -left-5 top-2 z-10 flex-shrink-0">
                         <div className="w-3 h-3 bg-muted rounded-full"></div>
                       </div>
 
-                      <div className="flex-1 pb-2">
-                        <div className="bg-secondary border-l-4 border-muted pl-4 pr-4 py-3 rounded-r-lg">
-                          <div className="mb-2">
-                            <span className="font-medium text-muted-foreground">Completed:</span>
-                          </div>
-                          <p className="text-base text-foreground leading-7">
-                            <CheckCircle className="w-4 h-4 text-muted-foreground inline mr-2" />
-                            I also finished{" "}
-                            <Tooltip>
-                              <TooltipTrigger asChild>
-                                <a
-                                  href="https://days-of-code.vercel.app/"
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="font-bold text-primary bg-muted px-2 py-1 rounded cursor-help underline decoration-wavy decoration-muted-foreground"
-                                >
-                                  30 web projects
-                                </a>
-                              </TooltipTrigger>
-                              <TooltipContent>
-                                <p>Using React, Tailwind, Next.js, and TypeScript</p>
-                              </TooltipContent>
-                            </Tooltip>{" "}
-                            in <span className="font-medium bg-muted px-2 py-1 rounded">30 days</span>, following{" "}
-                            <Tooltip>
-                              <TooltipTrigger asChild>
-                                <a
-                                  href="https://30projects30days.vercel.app/"
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="text-primary font-bold underline decoration-2 decoration-primary hover:decoration-muted-foreground transition-colors"
-                                >
-                                  tutorials
-                                </a>
-                              </TooltipTrigger>
-                              <TooltipContent>
-                                <p>Various online coding tutorials and courses</p>
-                              </TooltipContent>
-                            </Tooltip>{" "}
-                            with React, Tailwind, Next.js, and TypeScript.
-                          </p>
+                      <div className="bg-secondary border-l-4 border-muted pl-4 pr-4 py-3 rounded-r-lg">
+                        <div className="mb-2">
+                          <span className="font-medium text-muted-foreground">Completed:</span>
                         </div>
+                        <p className="text-base text-foreground leading-7">
+                          <CheckCircle className="w-4 h-4 text-muted-foreground inline mr-2" />
+                          I also finished{" "}
+                          <Tooltip>
+                            <TooltipTrigger asChild>
+                              <a
+                                href="https://days-of-code.vercel.app/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="font-bold text-primary bg-muted px-2 py-1 rounded cursor-help underline decoration-wavy decoration-muted-foreground"
+                              >
+                                30 web projects
+                              </a>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                              <p>Using React, Tailwind, Next.js, and TypeScript</p>
+                            </TooltipContent>
+                          </Tooltip>{" "}
+                          in <span className="font-medium bg-muted px-2 py-1 rounded">30 days</span>, following{" "}
+                          <Tooltip>
+                            <TooltipTrigger asChild>
+                              <a
+                                href="https://30projects30days.vercel.app/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-primary font-bold underline decoration-2 decoration-primary hover:decoration-muted-foreground transition-colors"
+                              >
+                                tutorials
+                              </a>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                              <p>Various online coding tutorials and courses</p>
+                            </TooltipContent>
+                          </Tooltip>{" "}
+                          with React, Tailwind, Next.js, and TypeScript.
+                        </p>
                       </div>
                     </div>
                   </div>
