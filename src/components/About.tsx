@@ -76,29 +76,28 @@ const About = () => {
                   <span className="underline decoration-wavy decoration-muted">fun coding challenges</span>:
                 </p>
 
-                <div className="relative pl-8">
-                  {/* Timeline Line - Positioned to align with dots */}
-                  <div className="absolute left-3 top-2 bottom-0 w-0.5 bg-border"></div>
+                <div className="relative ml-6">
+                  {/* Timeline Line */}
+                  <div className="absolute left-0 top-0 bottom-0 w-px bg-border"></div>
 
                   {/* Timeline Items */}
                   <div className="space-y-8">
                     {/* Currently Working - Most Important */}
-                    <div className="relative">
-                      <div className="absolute -left-5 top-2 z-10 flex-shrink-0">
-                        <div className="w-3 h-3 bg-primary border-2 border-primary rounded-full"></div>
-                        <div className="absolute inset-0.5 w-2 h-2 bg-background rounded-full animate-pulse"></div>
+                    <div className="relative pl-8">
+                      <div className="absolute -left-2 top-2 z-10 flex-shrink-0">
+                        <div className="w-4 h-4 bg-primary rounded-full"></div>
                       </div>
 
-                      <div className="bg-primary text-primary-foreground border-l-4 border-primary pl-4 pr-4 py-4 rounded-r-lg shadow-lg">
+                      <div className="bg-muted text-foreground pl-4 pr-4 py-4 rounded-lg shadow-lg">
                         <div className="mb-2">
                           <span className="font-bold">Currently:</span>
                         </div>
                         <p className="text-base leading-7">
-                          <Clock className="w-4 h-4 inline mr-2 animate-pulse" />
+                          <Clock className="w-4 h-4 inline mr-2" />
                           I'm solving one LeetCode problem every day, and I'm on day{" "}
                           <Tooltip>
                             <TooltipTrigger asChild>
-                              <span className="font-black text-primary bg-primary-foreground px-3 py-1 rounded-full cursor-help border-2 border-primary-foreground">
+                              <span className="font-black text-primary bg-secondary px-3 py-1 rounded-full cursor-help border-2 border-primary">
                                 {dayOfYear}
                               </span>
                             </TooltipTrigger>
@@ -144,12 +143,12 @@ const About = () => {
                     </div>
 
                     {/* Completed Item 1 */}
-                    <div className="relative">
-                      <div className="absolute -left-5 top-2 z-10 flex-shrink-0">
-                        <div className="w-3 h-3 bg-muted rounded-full"></div>
+                    <div className="relative pl-8">
+                      <div className="absolute -left-2 top-2 z-10 flex-shrink-0">
+                        <div className="w-4 h-4 bg-muted-foreground rounded-full"></div>
                       </div>
 
-                      <div className="bg-secondary border-l-4 border-muted pl-4 pr-4 py-3 rounded-r-lg">
+                      <div className="bg-secondary pl-4 pr-4 py-3 rounded-lg">
                         <div className="mb-2">
                           <span className="font-medium text-muted-foreground">Completed:</span>
                         </div>
@@ -177,12 +176,12 @@ const About = () => {
                     </div>
 
                     {/* Completed Item 2 */}
-                    <div className="relative">
-                      <div className="absolute -left-5 top-2 z-10 flex-shrink-0">
-                        <div className="w-3 h-3 bg-muted rounded-full"></div>
+                    <div className="relative pl-8">
+                      <div className="absolute -left-2 top-2 z-10 flex-shrink-0">
+                        <div className="w-4 h-4 bg-muted-foreground rounded-full"></div>
                       </div>
 
-                      <div className="bg-secondary border-l-4 border-muted pl-4 pr-4 py-3 rounded-r-lg">
+                      <div className="bg-secondary pl-4 pr-4 py-3 rounded-lg">
                         <div className="mb-2">
                           <span className="font-medium text-muted-foreground">Completed:</span>
                         </div>
