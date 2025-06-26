@@ -1,9 +1,22 @@
-
-"use client"
+"use client";
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import { Clock, CheckCircle, Mail, Github, Linkedin, Youtube, Twitch, MessageSquare } from "lucide-react";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import {
+  Clock,
+  CheckCircle,
+  Mail,
+  Github,
+  Linkedin,
+  Youtube,
+  Twitch,
+  MessageSquare,
+} from "lucide-react";
 import React, { useEffect, useState } from "react";
 
 const About = () => {
@@ -35,9 +48,12 @@ const About = () => {
               About Me
             </h2>
             <p className="text-xl text-muted-foreground">
-              <span className="underline decoration-wavy decoration-muted">Coding</span>,{" "}
-              <span className="font-bold">Playing</span>, and{" "}
-              <span className="bg-muted px-2 py-1 rounded">Learning</span> Every Day
+              <span className="underline decoration-wavy decoration-muted">
+                Coding
+              </span>
+              , <span className="font-bold">Playing</span>, and{" "}
+              <span className="bg-muted px-2 py-1 rounded">Learning</span> Every
+              Day
             </p>
           </div>
 
@@ -50,7 +66,8 @@ const About = () => {
                 <span className="font-black text-primary bg-secondary px-2 py-1 rounded">
                   Sofia
                 </span>
-                . I love learning new things and sharing what I learn online. You can follow my journey on{" "}
+                . I love learning new things and sharing what I learn online.
+                You can follow my journey on{" "}
                 <Tooltip>
                   <TooltipTrigger asChild>
                     <a
@@ -73,7 +90,10 @@ const About = () => {
               <div className="mb-8">
                 <p className="text-lg leading-relaxed text-foreground mb-6">
                   I also enjoy doing{" "}
-                  <span className="underline decoration-wavy decoration-muted">fun coding challenges</span>:
+                  <span className="underline decoration-wavy decoration-muted">
+                    fun coding challenges
+                  </span>
+                  :
                 </p>
 
                 <div className="relative ml-6">
@@ -92,7 +112,8 @@ const About = () => {
 
                       <div className="bg-muted text-foreground pl-4 pr-4 py-4 rounded-lg shadow-lg">
                         <p className="text-base leading-7">
-                          I'm solving one LeetCode problem every day, and I'm on day{" "}
+                          I'm solving one LeetCode problem every day, and I'm on
+                          day{" "}
                           <Tooltip>
                             <TooltipTrigger asChild>
                               <span className="font-black text-primary bg-secondary px-3 py-1 rounded-full cursor-help border-2 border-primary">
@@ -100,7 +121,9 @@ const About = () => {
                               </span>
                             </TooltipTrigger>
                             <TooltipContent>
-                              <p>Current streak: {dayOfYear} consecutive days! 🔥</p>
+                              <p>
+                                Current streak: {dayOfYear} consecutive days! 🔥
+                              </p>
                             </TooltipContent>
                           </Tooltip>{" "}
                           of 365 live on{" "}
@@ -166,7 +189,11 @@ const About = () => {
                               <p>Built with React and Tailwind CSS</p>
                             </TooltipContent>
                           </Tooltip>{" "}
-                          in <span className="font-medium bg-muted px-2 py-1 rounded">30 days</span> using React and Tailwind.
+                          in{" "}
+                          <span className="font-medium bg-muted px-2 py-1 rounded">
+                            30 days
+                          </span>{" "}
+                          using React and Tailwind.
                         </p>
                       </div>
                     </div>
@@ -194,10 +221,16 @@ const About = () => {
                               </a>
                             </TooltipTrigger>
                             <TooltipContent>
-                              <p>Using React, Tailwind, Next.js, and TypeScript</p>
+                              <p>
+                                Using React, Tailwind, Next.js, and TypeScript
+                              </p>
                             </TooltipContent>
                           </Tooltip>{" "}
-                          in <span className="font-medium bg-muted px-2 py-1 rounded">30 days</span>, following{" "}
+                          in{" "}
+                          <span className="font-medium bg-muted px-2 py-1 rounded">
+                            30 days
+                          </span>
+                          , following{" "}
                           <Tooltip>
                             <TooltipTrigger asChild>
                               <a
@@ -224,7 +257,10 @@ const About = () => {
               {/* GitHub Section */}
               <p className="text-lg leading-relaxed text-foreground">
                 I love to learn by{" "}
-                <span className="font-bold underline decoration-wavy decoration-muted">building</span>. My{" "}
+                <span className="font-bold underline decoration-wavy decoration-muted">
+                  building
+                </span>
+                . My{" "}
                 <Tooltip>
                   <TooltipTrigger asChild>
                     <span className="font-black text-primary bg-muted px-3 py-1 rounded-full cursor-help border border-border">
@@ -235,7 +271,11 @@ const About = () => {
                     <p>All open source and available to explore</p>
                   </TooltipContent>
                 </Tooltip>{" "}
-                are <span className="bg-muted px-2 py-1 rounded font-medium">open source</span> on{" "}
+                are{" "}
+                <span className="bg-muted px-2 py-1 rounded font-medium">
+                  open source
+                </span>{" "}
+                on{" "}
                 <Tooltip>
                   <TooltipTrigger asChild>
                     <a
@@ -251,51 +291,16 @@ const About = () => {
                     <p>Check out my code and projects</p>
                   </TooltipContent>
                 </Tooltip>{" "}
-                and show what I've learned so far. I'm <span className="font-bold text-primary">excited</span> to keep
+                and show what I've learned so far. I'm{" "}
+                <span className="font-bold text-primary">excited</span> to keep
                 growing and take everything I've learned to the{" "}
-                <span className="underline decoration-wavy decoration-muted-foreground font-bold">next level</span>!
+                <span className="underline decoration-wavy decoration-muted-foreground font-bold">
+                  next level
+                </span>
+                !
               </p>
             </CardContent>
           </Card>
-
-          {/* Connect Section */}
-          <div className="text-center">
-            <h3 className="text-3xl font-bold text-foreground mb-3">
-              Let's <span className="underline decoration-wavy decoration-muted">Connect</span>
-            </h3>
-            <p className="text-lg text-muted-foreground mb-8">
-              Looking forward to <span className="font-bold bg-muted px-2 py-1 rounded">job offers</span>,{" "}
-              <span className="underline decoration-2 decoration-muted">helping others</span>, and{" "}
-              <span className="font-bold">coding talks</span>!
-            </p>
-
-            <div className="flex justify-center gap-4 flex-wrap">
-              {[
-                { icon: <Mail className="w-5 h-5" />, label: "Email", href: "mailto:sofia@example.com" },
-                { icon: <Github className="w-5 h-5" />, label: "GitHub", href: "https://github.com/SofiaBargues" },
-                { icon: <Linkedin className="w-5 h-5" />, label: "LinkedIn", href: "https://www.linkedin.com/in/sofia-bargues/" },
-                { icon: <Youtube className="w-5 h-5" />, label: "YouTube", href: "https://www.youtube.com/@sofiabargues" },
-                { icon: <Twitch className="w-5 h-5" />, label: "Twitch", href: "https://www.twitch.tv/sofiabargues" },
-                { icon: <MessageSquare className="w-5 h-5" />, label: "Discord", href: "#" },
-              ].map((social, index) => (
-                <Tooltip key={index}>
-                  <TooltipTrigger asChild>
-                    <a
-                      href={social.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-12 h-12 rounded-full border-2 border-border flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-primary hover:bg-secondary transition-all duration-200 hover:scale-105"
-                    >
-                      {social.icon}
-                    </a>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p>Connect on {social.label}</p>
-                  </TooltipContent>
-                </Tooltip>
-              ))}
-            </div>
-          </div>
         </div>
       </section>
     </TooltipProvider>
