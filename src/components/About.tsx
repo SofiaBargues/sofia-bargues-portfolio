@@ -1,4 +1,3 @@
-
 "use client"
 
 import { Card, CardContent } from "@/components/ui/card";
@@ -85,15 +84,13 @@ const About = () => {
                     {/* Currently Working - Most Important */}
                     <div className="relative pl-8">
                       <div className="absolute -left-2 top-2 z-10 flex-shrink-0">
-                        <div className="w-4 h-4 bg-primary rounded-full"></div>
+                        <div className="w-4 h-4 bg-primary rounded-full flex items-center justify-center">
+                          <Clock className="w-2 h-2 text-white" />
+                        </div>
                       </div>
 
                       <div className="bg-muted text-foreground pl-4 pr-4 py-4 rounded-lg shadow-lg">
-                        <div className="mb-2">
-                          <span className="font-bold">Currently:</span>
-                        </div>
                         <p className="text-base leading-7">
-                          <Clock className="w-4 h-4 inline mr-2" />
                           I'm solving one LeetCode problem every day, and I'm on day{" "}
                           <Tooltip>
                             <TooltipTrigger asChild>
@@ -145,15 +142,13 @@ const About = () => {
                     {/* Completed Item 1 */}
                     <div className="relative pl-8">
                       <div className="absolute -left-2 top-2 z-10 flex-shrink-0">
-                        <div className="w-4 h-4 bg-muted-foreground rounded-full"></div>
+                        <div className="w-4 h-4 bg-muted-foreground rounded-full flex items-center justify-center">
+                          <CheckCircle className="w-2 h-2 text-white" />
+                        </div>
                       </div>
 
                       <div className="bg-secondary pl-4 pr-4 py-3 rounded-lg">
-                        <div className="mb-2">
-                          <span className="font-medium text-muted-foreground">Completed:</span>
-                        </div>
                         <p className="text-base text-foreground leading-7">
-                          <CheckCircle className="w-4 h-4 text-muted-foreground inline mr-2" />
                           Last year, I redesigned{" "}
                           <Tooltip>
                             <TooltipTrigger asChild>
@@ -178,15 +173,13 @@ const About = () => {
                     {/* Completed Item 2 */}
                     <div className="relative pl-8">
                       <div className="absolute -left-2 top-2 z-10 flex-shrink-0">
-                        <div className="w-4 h-4 bg-muted-foreground rounded-full"></div>
+                        <div className="w-4 h-4 bg-muted-foreground rounded-full flex items-center justify-center">
+                          <CheckCircle className="w-2 h-2 text-white" />
+                        </div>
                       </div>
 
                       <div className="bg-secondary pl-4 pr-4 py-3 rounded-lg">
-                        <div className="mb-2">
-                          <span className="font-medium text-muted-foreground">Completed:</span>
-                        </div>
                         <p className="text-base text-foreground leading-7">
-                          <CheckCircle className="w-4 h-4 text-muted-foreground inline mr-2" />
                           I also finished{" "}
                           <Tooltip>
                             <TooltipTrigger asChild>
