@@ -7,17 +7,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import {
-  Clock,
-  CheckCircle,
-  Mail,
-  Github,
-  Linkedin,
-  Youtube,
-  Twitch,
-  MessageSquare,
-} from "lucide-react";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const About = () => {
   const [repoCount, setRepoCount] = useState(93);
@@ -40,249 +30,314 @@ const About = () => {
 
   return (
     <TooltipProvider>
-      <section id="about" className="py-20 px-4 bg-secondary border-b-2">
+      <section id="about" className="py-20 px-4 bg-gray-100">
         <div className="max-w-4xl mx-auto animate-fade-in">
           {/* Header Section */}
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
               About Me
             </h2>
-            <p className="text-xl text-muted-foreground">
-              <span className="underline decoration-wavy decoration-muted">
-                Coding
-              </span>
-              , <span className="font-bold">Playing</span>, and{" "}
-              <span className="bg-muted px-2 py-1 rounded">Learning</span> Every
-              Day
+            <p className="text-xl text-gray-600">
+              Coding, Playing, and Learning Every Day
             </p>
           </div>
 
           {/* Main Content Card */}
-          <Card className="group  transition-all duration-300 border-2 border-border rounded-xl bg-card mb-16">
+          <Card className="group transition-all duration-300 border-2 border-gray-200 rounded-xl bg-white mb-16 shadow-sm">
             <CardContent className="p-8 md:p-12">
               {/* Introduction */}
-              <p className="text-lg leading-relaxed text-foreground mb-8">
+              <p className="text-lg leading-relaxed text-gray-700 mb-8">
                 Hi! I'm{" "}
-                <span className="font-black text-primary bg-secondary px-2 py-1 rounded">
-                  Sofia
+                <span className="text-gray-900 relative">
+                  <span className="relative z-10  text-lg leading-relaxed text-gray-700 mb-8">
+                    Sofia
+                  </span>
+                  <svg
+                    className="absolute -bottom-1 left-0 w-full h-2"
+                    viewBox="0 0 100 8"
+                    preserveAspectRatio="none"
+                  >
+                    <path
+                      d="M0,4 Q25,1 50,4 T100,4"
+                      stroke="#FCD34D"
+                      strokeWidth="3"
+                      fill="none"
+                      strokeLinecap="round"
+                    />
+                  </svg>
                 </span>
-                . I love learning new things and sharing what I learn online.
-                You can follow my journey on{" "}
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <a
-                      href="https://www.linkedin.com/in/sofia-bargues/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-primary font-bold underline decoration-2 decoration-primary hover:decoration-muted-foreground transition-colors"
-                    >
-                      LinkedIn
-                    </a>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p>Follow my professional journey</p>
-                  </TooltipContent>
-                </Tooltip>
+                . I love learning new things and{" "}
+                <span className="relative">
+                  <span className="relative z-10">
+                    sharing what I learn online
+                  </span>
+                  <svg
+                    className="absolute -bottom-1 left-0 w-full h-2"
+                    viewBox="0 0 100 8"
+                    preserveAspectRatio="none"
+                  >
+                    <path
+                      d="M0,4 Q25,6 50,3 T100,5"
+                      stroke="#FCD34D"
+                      strokeWidth="2"
+                      fill="none"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                </span>
+                .{" "}
+                <span className="relative">
+                  <span className="relative z-10">
+                    You can follow my journey on
+                  </span>
+                  <svg
+                    className="absolute -bottom-1 left-0 w-full h-2"
+                    viewBox="0 0 100 6"
+                    preserveAspectRatio="none"
+                  >
+                    <path
+                      d="M0,3 L100,3"
+                      stroke="#60A5FA"
+                      strokeWidth="2"
+                      fill="none"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                </span>{" "}
+                <a
+                  href="https://www.linkedin.com/in/sofia-bargues/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 relative"
+                >
+                  <span className="relative z-10 underline">LinkedIn</span>
+                </a>
                 .
               </p>
 
-              {/* Timeline Section */}
+              {/* Coding Challenges Section */}
               <div className="mb-8">
-                <p className="text-lg leading-relaxed text-foreground mb-6">
-                  I also enjoy doing{" "}
-                  <span className="underline decoration-wavy decoration-muted">
-                    fun coding challenges
+                <p className="text-lg leading-relaxed text-gray-700 mb-6">
+                  I enjoy doing{" "}
+                  <span className="relative">
+                    <span className="relative z-10">fun coding challenges</span>
+                    <svg
+                      className="absolute -bottom-1 left-0 w-full h-2"
+                      viewBox="0 0 100 8"
+                      preserveAspectRatio="none"
+                    >
+                      <path
+                        d="M0,4 Q25,6 50,3 T100,5"
+                        stroke="#f27875"
+                        strokeWidth="2"
+                        fill="none"
+                        strokeLinecap="round"
+                      />
+                    </svg>
                   </span>
                   :
                 </p>
 
-                <div className="relative ml-6">
-                  {/* Timeline Line */}
-                  <div className="absolute left-0 top-0 bottom-0 w-px bg-border"></div>
-
-                  {/* Timeline Items */}
-                  <div className="space-y-8">
-                    {/* Currently Working - Most Important */}
-                    <div className="relative pl-8">
-                      <div className="absolute -left-4 top-2 z-10 flex-shrink-0">
-                        <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                          <Clock className="w-4 h-4 text-white" />
-                        </div>
-                      </div>
-
-                      <div className="bg-muted text-foreground pl-4 pr-4 py-4 rounded-lg shadow-lg">
-                        <p className="text-base leading-7">
-                          I'm solving one LeetCode problem every day, and I'm on
-                          day{" "}
-                          <Tooltip>
-                            <TooltipTrigger asChild>
-                              <span className="font-black text-primary bg-secondary px-3 py-1 rounded-full cursor-help border-2 border-primary">
-                                {dayOfYear}
-                              </span>
-                            </TooltipTrigger>
-                            <TooltipContent>
-                              <p>
-                                Current streak: {dayOfYear} consecutive days! 🔥
-                              </p>
-                            </TooltipContent>
-                          </Tooltip>{" "}
-                          of 365 live on{" "}
-                          <Tooltip>
-                            <TooltipTrigger asChild>
-                              <a
-                                href="https://www.twitch.tv/sofiabargues"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="font-bold underline decoration-2 hover:decoration-muted transition-colors"
-                              >
-                                Twitch
-                              </a>
-                            </TooltipTrigger>
-                            <TooltipContent>
-                              <p>Watch me solve problems live!</p>
-                            </TooltipContent>
-                          </Tooltip>{" "}
-                          and sharing some solutions on{" "}
-                          <Tooltip>
-                            <TooltipTrigger asChild>
-                              <a
-                                href="https://www.youtube.com/@sofiabargues"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="font-bold underline decoration-2 hover:decoration-muted transition-colors"
-                              >
-                                YouTube
-                              </a>
-                            </TooltipTrigger>
-                            <TooltipContent>
-                              <p>Check out my coding tutorials</p>
-                            </TooltipContent>
-                          </Tooltip>
-                          .
-                        </p>
-                      </div>
-                    </div>
-
-                    {/* Completed Item 1 */}
-                    <div className="relative pl-8">
-                      <div className="absolute -left-4 top-2 z-10 flex-shrink-0">
-                        <div className="w-8 h-8 bg-muted-foreground rounded-full flex items-center justify-center">
-                          <CheckCircle className="w-4 h-4 text-white" />
-                        </div>
-                      </div>
-
-                      <div className="bg-secondary pl-4 pr-4 py-3 rounded-lg">
-                        <p className="text-base text-foreground leading-7">
-                          Last year, I redesigned{" "}
-                          <Tooltip>
-                            <TooltipTrigger asChild>
-                              <a
-                                href="https://30-days-30-redesign.vercel.app/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="font-bold text-primary bg-muted px-2 py-1 rounded cursor-help underline decoration-wavy decoration-muted-foreground"
-                              >
-                                30 local business websites
-                              </a>
-                            </TooltipTrigger>
-                            <TooltipContent>
-                              <p>Built with React and Tailwind CSS</p>
-                            </TooltipContent>
-                          </Tooltip>{" "}
-                          in{" "}
-                          <span className="font-medium bg-muted px-2 py-1 rounded">
-                            30 days
-                          </span>{" "}
-                          using React and Tailwind.
-                        </p>
-                      </div>
-                    </div>
-
-                    {/* Completed Item 2 */}
-                    <div className="relative pl-8">
-                      <div className="absolute -left-4 top-2 z-10 flex-shrink-0">
-                        <div className="w-8 h-8 bg-muted-foreground rounded-full flex items-center justify-center">
-                          <CheckCircle className="w-4 h-4 text-white" />
-                        </div>
-                      </div>
-
-                      <div className="bg-secondary pl-4 pr-4 py-3 rounded-lg">
-                        <p className="text-base text-foreground leading-7">
-                          I also finished{" "}
-                          <Tooltip>
-                            <TooltipTrigger asChild>
-                              <a
-                                href="https://days-of-code.vercel.app/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="font-bold text-primary bg-muted px-2 py-1 rounded cursor-help underline decoration-wavy decoration-muted-foreground"
-                              >
-                                30 web projects
-                              </a>
-                            </TooltipTrigger>
-                            <TooltipContent>
-                              <p>
-                                Using React, Tailwind, Next.js, and TypeScript
-                              </p>
-                            </TooltipContent>
-                          </Tooltip>{" "}
-                          in{" "}
-                          <span className="font-medium bg-muted px-2 py-1 rounded">
-                            30 days
+                {/* Clean Timeline Items */}
+                <div className="space-y-6">
+                  {/* Current Item */}
+                  <div className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 bg-gray-900 rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-lg text-gray-700 leading-7">
+                      I'm solving{" "}
+                      <span className="relative bg-orange-200 px-1 rounded">
+                        <span className="relative z-10">
+                          one LeetCode problem every day
+                        </span>
+                      </span>
+                      , currently on day{" "}
+                      <Tooltip>
+                        <TooltipTrigger asChild>
+                          <span className="text-orange-600 bg-orange-100 px-2 py-1 rounded cursor-help border-2 border-orange-300">
+                            {dayOfYear}
                           </span>
-                          , following{" "}
-                          <Tooltip>
-                            <TooltipTrigger asChild>
-                              <a
-                                href="https://30projects30days.vercel.app/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-primary font-bold underline decoration-2 decoration-primary hover:decoration-muted-foreground transition-colors"
-                              >
-                                tutorials
-                              </a>
-                            </TooltipTrigger>
-                            <TooltipContent>
-                              <p>Various online coding tutorials and courses</p>
-                            </TooltipContent>
-                          </Tooltip>{" "}
-                          with React, Tailwind, Next.js, and TypeScript.
-                        </p>
-                      </div>
-                    </div>
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>Consecutive days! 🔥</p>
+                        </TooltipContent>
+                      </Tooltip>{" "}
+                      out of 365, live on{" "}
+                      <Tooltip>
+                        <TooltipTrigger asChild>
+                          <a
+                            href="https://www.twitch.tv/sofiabargues"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-purple-600 underline relative"
+                          >
+                            <span className="relative z-10">Twitch</span>
+                          </a>
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>Watch me solve problems live!</p>
+                        </TooltipContent>
+                      </Tooltip>{" "}
+                      and I'm sharing some of the solutions on{" "}
+                      <Tooltip>
+                        <TooltipTrigger asChild>
+                          <a
+                            href="https://www.youtube.com/@sofiabargues"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-red-600 underline decoration-red-200 hover:decoration-red-400 transition-colors"
+                          >
+                            YouTube
+                          </a>
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>Check out my coding tutorials</p>
+                        </TooltipContent>
+                      </Tooltip>
+                      .
+                    </p>
+                  </div>
+
+                  {/* Completed Item 1 */}
+                  <div className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 bg-gray-900 rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-lg text-gray-700 leading-7">
+                      Last year, I redesigned{" "}
+                      <Tooltip>
+                        <TooltipTrigger asChild>
+                          <a
+                            href="https://days-of-code.vercel.app/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-green-600 bg-green-200 px-2 py-1 rounded cursor-help relative"
+                          >
+                            <span className="relative z-10">
+                              30 local business websites
+                            </span>
+                            <svg
+                              className="absolute -bottom-1 left-0 w-full h-2"
+                              viewBox="0 0 100 6"
+                              preserveAspectRatio="none"
+                            >
+                              <path
+                                d="M0,3 L100,3"
+                                stroke="#26e600"
+                                strokeWidth="2"
+                                fill="none"
+                                strokeLinecap="round"
+                              />
+                            </svg>
+                          </a>
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>Built with React and Tailwind CSS</p>
+                        </TooltipContent>
+                      </Tooltip>{" "}
+                      in{" "}
+                      <span className="relative">
+                        <span className="relative z-10">30 days.</span>
+                        <svg
+                          className="absolute -bottom-2 left-0 w-full h-3"
+                          viewBox="0 0 100 8"
+                          preserveAspectRatio="none"
+                        >
+                          <path
+                            d="M0,4 Q50,1 100,4"
+                            stroke="#26e600"
+                            strokeWidth="2"
+                            fill="none"
+                            strokeLinecap="round"
+                          />
+                        </svg>
+                      </span>
+                    </p>
+                  </div>
+
+                  {/* Completed Item 2 */}
+                  <div className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 bg-gray-900 rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-lg text-gray-700 leading-7">
+                      I also finished{" "}
+                      <Tooltip>
+                        <TooltipTrigger asChild>
+                          <a
+                            href="https://days-of-code.vercel.app/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-600 bg-blue-100 px-2 py-1 rounded cursor-help relative"
+                          >
+                            <span className="relative z-10">
+                              30 web projects
+                            </span>
+                            <svg
+                              className="absolute -bottom-1 left-0 w-full h-2"
+                              viewBox="0 0 100 6"
+                              preserveAspectRatio="none"
+                            >
+                              <path
+                                d="M0,3 L100,3"
+                                stroke="#3B82F6"
+                                strokeWidth="2"
+                                fill="none"
+                                strokeLinecap="round"
+                              />
+                            </svg>
+                          </a>
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>Using React, Tailwind, Next.js, and TypeScript</p>
+                        </TooltipContent>
+                      </Tooltip>{" "}
+                      in{" "}
+                      <span className="relative">
+                        <span className="relative z-10">30 days</span>
+                        <svg
+                          className="absolute -bottom-2 left-0 w-full h-3"
+                          viewBox="0 0 100 8"
+                          preserveAspectRatio="none"
+                        >
+                          <path
+                            d="M0,4 Q50,1 100,4"
+                            stroke="#3B82F6"
+                            strokeWidth="2"
+                            fill="none"
+                            strokeLinecap="round"
+                          />
+                        </svg>
+                      </span>
+                      , following tutorials.
+                    </p>
                   </div>
                 </div>
               </div>
 
               {/* GitHub Section */}
-              <p className="text-lg leading-relaxed text-foreground">
+              <p className="text-lg leading-relaxed text-gray-700">
                 I love to learn by{" "}
-                <span className="font-bold underline decoration-wavy decoration-muted">
-                  building
+                <span className="relative">
+                  <span className="relative z-10">building</span>
+                  <svg
+                    className="absolute -bottom-1 left-0 w-full h-2"
+                    viewBox="0 0 100 8"
+                    preserveAspectRatio="none"
+                  >
+                    <path
+                      d="M0,4 Q25,6 50,3 T100,5"
+                      stroke="#FCD34D"
+                      strokeWidth="2"
+                      fill="none"
+                      strokeLinecap="round"
+                    />
+                  </svg>
                 </span>
-                . My{" "}
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <span className="font-black text-primary bg-muted px-3 py-1 rounded-full cursor-help border border-border">
-                      {repoCount} repos
-                    </span>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p>All open source and available to explore</p>
-                  </TooltipContent>
-                </Tooltip>{" "}
-                are{" "}
-                <span className="bg-muted px-2 py-1 rounded font-medium">
-                  open source
-                </span>{" "}
-                on{" "}
+                . My <span className="text-gray-900">{repoCount} repos </span>
+                are on{" "}
                 <Tooltip>
                   <TooltipTrigger asChild>
                     <a
                       href="https://github.com/SofiaBargues"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-primary font-bold underline decoration-2 decoration-primary hover:decoration-muted-foreground transition-colors"
+                      className="text-gray-700 underline decoration-gray-300 hover:decoration-gray-500 transition-colors"
                     >
                       GitHub
                     </a>
@@ -291,11 +346,46 @@ const About = () => {
                     <p>Check out my code and projects</p>
                   </TooltipContent>
                 </Tooltip>{" "}
-                and show what I've learned so far. I'm{" "}
-                <span className="font-bold text-primary">excited</span> to keep
-                growing and take everything I've learned to the{" "}
-                <span className="underline decoration-wavy decoration-muted-foreground font-bold">
-                  next level
+                <span className="relative">
+                  <span className="relative z-10">
+                    show what I've learned so far
+                  </span>
+                  <svg
+                    className="absolute -bottom-1 left-0 w-full h-2"
+                    viewBox="0 0 100 6"
+                    preserveAspectRatio="none"
+                  >
+                    <path
+                      d="M0,3 L100,3"
+                      stroke="#A855F7"
+                      strokeWidth="2"
+                      fill="none"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                </span>
+                .
+                <br /> I'm <span className="text-gray-900">
+                  excited
+                </span> to{" "}
+                <span className="relative">
+                  <span className="relative z-10">
+                    keep growing and take everything I've learned to the next
+                    level
+                  </span>
+                  <svg
+                    className="absolute -bottom-1 left-0 w-full h-2"
+                    viewBox="0 0 100 8"
+                    preserveAspectRatio="none"
+                  >
+                    <path
+                      d="M0,4 Q25,6 50,3 T100,5"
+                      stroke="#10B981"
+                      strokeWidth="2"
+                      fill="none"
+                      strokeLinecap="round"
+                    />
+                  </svg>
                 </span>
                 !
               </p>
