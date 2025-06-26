@@ -1,3 +1,4 @@
+
 "use client"
 
 import { Card, CardContent } from "@/components/ui/card";
@@ -83,9 +84,9 @@ const About = () => {
                   <div className="space-y-8">
                     {/* Currently Working - Most Important */}
                     <div className="relative pl-8">
-                      <div className="absolute -left-2 top-2 z-10 flex-shrink-0">
-                        <div className="w-4 h-4 bg-primary rounded-full flex items-center justify-center">
-                          <Clock className="w-2 h-2 text-white" />
+                      <div className="absolute -left-4 top-2 z-10 flex-shrink-0">
+                        <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                          <Clock className="w-4 h-4 text-white" />
                         </div>
                       </div>
 
@@ -141,9 +142,9 @@ const About = () => {
 
                     {/* Completed Item 1 */}
                     <div className="relative pl-8">
-                      <div className="absolute -left-2 top-2 z-10 flex-shrink-0">
-                        <div className="w-4 h-4 bg-muted-foreground rounded-full flex items-center justify-center">
-                          <CheckCircle className="w-2 h-2 text-white" />
+                      <div className="absolute -left-4 top-2 z-10 flex-shrink-0">
+                        <div className="w-8 h-8 bg-muted-foreground rounded-full flex items-center justify-center">
+                          <CheckCircle className="w-4 h-4 text-white" />
                         </div>
                       </div>
 
@@ -172,9 +173,9 @@ const About = () => {
 
                     {/* Completed Item 2 */}
                     <div className="relative pl-8">
-                      <div className="absolute -left-2 top-2 z-10 flex-shrink-0">
-                        <div className="w-4 h-4 bg-muted-foreground rounded-full flex items-center justify-center">
-                          <CheckCircle className="w-2 h-2 text-white" />
+                      <div className="absolute -left-4 top-2 z-10 flex-shrink-0">
+                        <div className="w-8 h-8 bg-muted-foreground rounded-full flex items-center justify-center">
+                          <CheckCircle className="w-4 h-4 text-white" />
                         </div>
                       </div>
 
@@ -221,41 +222,39 @@ const About = () => {
               </div>
 
               {/* GitHub Section */}
-              <div className="border-t border-border pt-6">
-                <p className="text-lg leading-relaxed text-foreground">
-                  I love to learn by{" "}
-                  <span className="font-bold underline decoration-wavy decoration-muted">building</span>. My{" "}
-                  <Tooltip>
-                    <TooltipTrigger asChild>
-                      <span className="font-black text-primary bg-muted px-3 py-1 rounded-full cursor-help border border-border">
-                        {repoCount} repos
-                      </span>
-                    </TooltipTrigger>
-                    <TooltipContent>
-                      <p>All open source and available to explore</p>
-                    </TooltipContent>
-                  </Tooltip>{" "}
-                  are <span className="bg-muted px-2 py-1 rounded font-medium">open source</span> on{" "}
-                  <Tooltip>
-                    <TooltipTrigger asChild>
-                      <a
-                        href="https://github.com/SofiaBargues"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-primary font-bold underline decoration-2 decoration-primary hover:decoration-muted-foreground transition-colors"
-                      >
-                        GitHub
-                      </a>
-                    </TooltipTrigger>
-                    <TooltipContent>
-                      <p>Check out my code and projects</p>
-                    </TooltipContent>
-                  </Tooltip>{" "}
-                  and show what I've learned so far. I'm <span className="font-bold text-primary">excited</span> to keep
-                  growing and take everything I've learned to the{" "}
-                  <span className="underline decoration-wavy decoration-muted-foreground font-bold">next level</span>!
-                </p>
-              </div>
+              <p className="text-lg leading-relaxed text-foreground">
+                I love to learn by{" "}
+                <span className="font-bold underline decoration-wavy decoration-muted">building</span>. My{" "}
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <span className="font-black text-primary bg-muted px-3 py-1 rounded-full cursor-help border border-border">
+                      {repoCount} repos
+                    </span>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>All open source and available to explore</p>
+                  </TooltipContent>
+                </Tooltip>{" "}
+                are <span className="bg-muted px-2 py-1 rounded font-medium">open source</span> on{" "}
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <a
+                      href="https://github.com/SofiaBargues"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary font-bold underline decoration-2 decoration-primary hover:decoration-muted-foreground transition-colors"
+                    >
+                      GitHub
+                    </a>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>Check out my code and projects</p>
+                  </TooltipContent>
+                </Tooltip>{" "}
+                and show what I've learned so far. I'm <span className="font-bold text-primary">excited</span> to keep
+                growing and take everything I've learned to the{" "}
+                <span className="underline decoration-wavy decoration-muted-foreground font-bold">next level</span>!
+              </p>
             </CardContent>
           </Card>
 
