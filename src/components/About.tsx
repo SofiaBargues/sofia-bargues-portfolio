@@ -58,7 +58,7 @@ const About = () => {
           </div>
 
           {/* Main Content Card */}
-          <Card className="group hover:shadow-lg transition-all duration-300 border-2 border-border rounded-xl bg-card mb-16">
+          <Card className="group  transition-all duration-300 border-2 border-border rounded-xl bg-card mb-16">
             <CardContent className="p-8 md:p-12">
               {/* Introduction */}
               <p className="text-lg leading-relaxed text-foreground mb-8">
