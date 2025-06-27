@@ -1,9 +1,38 @@
+import Image from "public/tuki.webp";
+import { useState } from "react";
+
 const Hero = () => {
   const scrollToAbout = () => {
     const element = document.getElementById("about");
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
+  };
+
+  const [showTuki, setShowTuki] = useState(false);
+  const [confetti, setConfetti] = useState<
+    Array<{ id: number; x: number; y: number; color: string }>
+  >([]);
+
+  const triggerTukiEasterEgg = () => {
+    setShowTuki(true);
+
+    // Generate confetti
+    const newConfetti = Array.from({ length: 50 }, (_, i) => ({
+      id: i,
+      x: Math.random() * 100,
+      y: Math.random() * 100,
+      color: ["#ff6b6b", "#4ecdc4", "#45b7d1", "#96ceb4", "#ffeaa7"][
+        Math.floor(Math.random() * 5)
+      ],
+    }));
+    setConfetti(newConfetti);
+
+    // Hide after 3 seconds
+    setTimeout(() => {
+      setShowTuki(false);
+      setConfetti([]);
+    }, 3000);
   };
 
   return (
@@ -41,7 +70,6 @@ const Hero = () => {
           </h2>
 
           {/* Call to action button */}
-          {/* Call to action button */}
           <button
             onClick={scrollToAbout}
             className="px-8 py-4 border-2 border-border bg-transparent text-foreground font-medium text-lg tracking-wide hover:bg-foreground hover:text-background transition-all duration-300 rounded-xl"
@@ -59,7 +87,43 @@ const Hero = () => {
               className="w-full h-full object-cover"
               sizes="(max-width: 640px) 192px, (max-width: 768px) 224px, (max-width: 1024px) 256px, (max-width: 1280px) 320px, 400px"
             />
+            {/* Invisible clickable area for easter egg */}
+            <div
+              className="absolute top-[35%] left-[1%] w-12 h-12 cursor-pointer z-10 hover:bg-green-400 hover:bg-opacity-20 rounded-full transition-all duration-200"
+              onClick={triggerTukiEasterEgg}
+              title="🎉 Click me!"
+            />
           </div>
+          {/* Tuki Easter Egg */}
+          {showTuki && (
+            <div className="fixed inset-0 flex items-center justify-center z-50 pointer-events-none">
+              {/* Confetti */}
+              {confetti.map((piece) => (
+                <div
+                  key={piece.id}
+                  className="absolute w-2 h-2 animate-bounce"
+                  style={{
+                    left: `${piece.x}%`,
+                    top: `${piece.y}%`,
+                    backgroundColor: piece.color,
+                    animationDelay: `${Math.random() * 2}s`,
+                    animationDuration: `${1 + Math.random()}s`,
+                  }}
+                />
+              ))}
+
+              {/* Tuki character */}
+              <div className="animate-pulse">
+                <img
+                  src="/tuki.webp"
+                  alt="Tuki celebrating!"
+                  width={200}
+                  height={200}
+                  className="drop-shadow-lg"
+                />
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </section>
