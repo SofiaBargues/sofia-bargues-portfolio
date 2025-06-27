@@ -68,13 +68,13 @@ const About = () => {
                 {/* LeetCode */}
                 <TimelineItem>
                   I'm solving{" "}
-                  <span className="bg-orange-200 px-1 rounded">
-                    one LeetCode problem every day
-                  </span>
-                  , currently on day{" "}
+                  <Highlight color="orange" text="one LeetCode "></Highlight>
+                  problem{" "}
+                  <Highlight color="orange" text="every day"></Highlight>,
+                  currently on day{" "}
                   <Tooltip>
                     <TooltipTrigger asChild>
-                      <span className=" text-gray-700 bg-orange-200 px-1 rounded cursor-help">
+                      <span className=" text-gray-700 bg-orange-200 px-1 rounded">
                         {dayOfYear}
                       </span>
                     </TooltipTrigger>
@@ -89,7 +89,7 @@ const About = () => {
                     tooltip="Watch me solve problems live!"
                   >
                     <a
-                      href="https://www.linkedin.com/in/sofia-bargues/"
+                      href="https://www.twitch.tv/sofiabargues"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-purple-700 underline"
@@ -103,26 +103,31 @@ const About = () => {
                 {/* 30 websites */}
                 <TimelineItem>
                   Last year, I redesigned{" "}
-                  <ExternalHighlight
-                    href="https://days-of-code.vercel.app/"
-                    text="30 local business websites"
-                    color="#63f15c"
-                    tooltip="Built with React and Tailwind CSS"
-                  />{" "}
-                  in <Underline text="30 days" color="#63f15c" />.
+                  <a
+                    href="https://30-days-30-redesign.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className=" underline"
+                  >
+                    30 local business websites
+                  </a>{" "}
+                  in <Underline text="30 days" color="#63f15c" />, using React
+                  and Tailwind CSS.
                 </TimelineItem>
 
                 {/* 30 projects */}
                 <TimelineItem>
                   I also finished{" "}
-                  <ExternalHighlight
+                  <a
                     href="https://days-of-code.vercel.app/"
-                    text="30 web projects"
-                    color="#3B82F6"
-                    tooltip="Using React, Tailwind, Next.js, and TypeScript"
-                  />{" "}
-                  in <Underline text="30 days" color="#3B82F6" />, following
-                  tutorials.
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className=" underline"
+                  >
+                    30 web projects
+                  </a>{" "}
+                  in <Underline text="30 days" color="#3B82F6" />, Using React,
+                  Tailwind, Next.js, and TypeScript.
                 </TimelineItem>
               </div>
 
@@ -130,15 +135,26 @@ const About = () => {
               <p className="text-lg text-gray-700 leading-relaxed">
                 I love to learn by <Highlight text="building" color="#FCD34D" />
                 . I have{" "}
-                <span className="text-gray-900">{repoCount} repos</span> on{" "}
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <span className=" text-gray-700 bg-yellow-200 px-1 rounded">
+                      {repoCount}
+                    </span>
+                  </TooltipTrigger>
+
+                  <TooltipContent>
+                    <p>Open-source</p>
+                  </TooltipContent>
+                </Tooltip>{" "}
+                repos on{" "}
                 <a
-                  href="https://www.linkedin.com/in/sofia-bargues/"
+                  href="https://github.com/SofiaBargues"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-1000 underline"
                 >
-                  GitHub{" "}
-                </a>
+                  GitHub
+                </a>{" "}
                 show what I've doing so far.
                 <br />
                 I'm <span>excited</span> to{" "}
@@ -179,7 +195,7 @@ const Highlight = ({ text, color }: { text: string; color: string }) => (
 // 🟩 Underline Component
 const Underline = ({ text, color }: { text: string; color: string }) => (
   <span className="relative">
-    <span className="relative z-10">{text}</span>
+    <span className="z-10">{text}</span>
     <svg
       className="absolute -bottom-2 left-0 w-full h-3"
       viewBox="0 0 100 8"

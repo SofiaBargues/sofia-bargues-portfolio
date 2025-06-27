@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar } from "lucide-react";
@@ -12,10 +11,10 @@ const Experience = () => {
       responsibilities: [
         "Migrated 15+ UI components from legacy website to Figma, reducing future development time by 40%.",
         "Coordinated task prioritization across 4-member team, delivering project on schedule with excellent stakeholder feedback.",
-        "Tracked progress via public board with regular updates, maintaining 100% alignment with project requirements."
+        "Tracked progress via public board with regular updates, maintaining 100% alignment with project requirements.",
       ],
-      technologies: ["Figma", "UI/UX Design", "MUI", "React"]
-    }
+      technologies: ["Figma", "UI/UX Design", "MUI", "React", "TypeScript"],
+    },
   ];
 
   return (
@@ -32,9 +31,9 @@ const Experience = () => {
 
         <div className="space-y-8">
           {experiences.map((experience, index) => (
-            <Card 
-              key={experience.company} 
-              style={{ animationDelay: `${index * 0.2}s` }} 
+            <Card
+              key={experience.company}
+              style={{ animationDelay: `${index * 0.2}s` }}
               className="border-2 border-border rounded-xl bg-card overflow-hidden animate-fade-in"
             >
               <CardHeader>
@@ -53,22 +52,28 @@ const Experience = () => {
                   </div>
                 </div>
               </CardHeader>
-              
+
               <CardContent>
                 <div className="mb-6">
                   <ul className="space-y-3">
                     {experience.responsibilities.map((responsibility, idx) => (
                       <li key={idx} className="flex items-start">
                         <span className="text-primary mr-3 mt-1">•</span>
-                        <span className="text-foreground leading-relaxed">{responsibility}</span>
+                        <span className="text-foreground leading-relaxed">
+                          {responsibility}
+                        </span>
                       </li>
                     ))}
                   </ul>
                 </div>
-                
+
                 <div className="flex flex-wrap gap-2">
-                  {experience.technologies.map(tech => (
-                    <Badge key={tech} variant="outline" className="text-xs rounded-xl border-2 border-border">
+                  {experience.technologies.map((tech) => (
+                    <Badge
+                      key={tech}
+                      variant="outline"
+                      className="text-xs rounded-xl border-2 border-border"
+                    >
                       {tech}
                     </Badge>
                   ))}
