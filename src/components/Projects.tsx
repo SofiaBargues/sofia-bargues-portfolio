@@ -26,7 +26,7 @@ const Projects = () => {
       liveUrl: "https://memorypalace.vercel.app",
       githubUrl: "https://github.com/SofiaBargues/memory-palace",
       featured: false,
-      image: "/lovable-uploads/39e48df3-76e2-43de-a3f0-74a0d1da9b35.png",
+      image: "/uploads/39e48df3-76e2-43de-a3f0-74a0d1da9b35.png",
     },
     {
       title: "Frontend-30",
@@ -36,7 +36,7 @@ const Projects = () => {
       liveUrl: "https://frontend-30.vercel.app/",
       githubUrl: "https://github.com/SofiaBargues/frontend-30",
       featured: false,
-      image: "/lovable-uploads/c407bb29-e3f1-41fb-8520-5041073a989c.png",
+      image: "/uploads/c407bb29-e3f1-41fb-8520-5041073a989c.png",
     },
   ];
 
