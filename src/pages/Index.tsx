@@ -5,12 +5,10 @@ import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
-import { Analytics } from "@vercel/analytics/next";
 
 const Index = () => {
   return (
     <div className="min-h-screen gap-4 ">
-      <Analytics />
       <Navigation />
       <Hero />
       <Skills />
