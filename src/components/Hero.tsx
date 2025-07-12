@@ -82,7 +82,7 @@ const Hero = () => {
         <div className="flex-shrink-0 mb-6 md:mb-0">
           <div className="relative w-48 h-48  sm:w-72 sm:h-72 lg:w-96 lg:h-96 xl:w-[500px] xl:h-[500px] rounded-full overflow-hidden border border-muted-foreground shadow-lg mx-auto">
             <img
-              src="/uploads/heroImage.jpg"
+              src="/uploads/heroImage.webp"
               alt="Sofia Bargues"
               className="w-full h-full object-cover"
               sizes="(max-width: 640px) 192px, (max-width: 768px) 224px, (max-width: 1024px) 256px, (max-width: 1280px) 320px, 400px"
@@ -127,7 +127,6 @@ const Hero = () => {
         </div>
       </div>
     </section>
-
   );
 };
 
