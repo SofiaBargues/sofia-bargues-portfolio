@@ -1,4 +1,3 @@
-import Image from "public/tuki.webp";
 import { useState } from "react";
 
 const Hero = () => {
@@ -85,6 +84,7 @@ const Hero = () => {
               src="/uploads/heroImage.webp"
               alt="Sofia Bargues"
               className="w-full h-full object-cover"
+              fetchPriority="high"
               sizes="(max-width: 640px) 192px, (max-width: 768px) 224px, (max-width: 1024px) 256px, (max-width: 1280px) 320px, 400px"
             />
             {/* Invisible clickable area for easter egg */}
