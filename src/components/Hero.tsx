@@ -38,7 +38,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center border-b-2 bg-[#e6e6e6] overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center border-b-2 bg-[#f5f5f5] overflow-hidden"
     >
       {/* Central content with better hierarchy */}
       <div className="relative z-10 flex flex-col-reverse md:flex-row items-center text-start max-w-6xl mx-auto px-6 gap-8 md:gap-12 container py-8">

@@ -4,7 +4,7 @@ import { Github, Linkedin, Youtube, Mail, Twitter, Twitch } from "lucide-react";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-20 px-4  bg-[#e6e6e6]  ">
+    <section id="contact" className="py-20 px-4  bg-[#f5f5f5]  ">
       <div className="max-w-4xl mx-auto text-center animate-fade-in">
         <div className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
