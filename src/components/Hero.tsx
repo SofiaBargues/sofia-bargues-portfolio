@@ -17,7 +17,7 @@ const Hero = () => {
     setShowTuki(true);
 
     // Generate confetti
-    const newConfetti = Array.from({ length: 50 }, (_, i) => ({
+    const newConfetti = Array.from({ length: 200 }, (_, i) => ({
       id: i,
       x: Math.random() * 100,
       y: Math.random() * 100,
@@ -89,7 +89,7 @@ const Hero = () => {
             />
             {/* Invisible clickable area for easter egg */}
             <div
-              className="absolute top-[35%] left-[1%] w-12 h-12 cursor-pointer z-10 hover:bg-green-400 hover:bg-opacity-20 rounded-full transition-all duration-200"
+              className="absolute top-[36%] left-[1%] w-20 h-20 cursor-pointer z-10 hover:bg-green-400 hover:bg-opacity-20 rounded-full transition-all duration-200"
               onClick={triggerTukiEasterEgg}
               title="🎉 Click me!"
             />
