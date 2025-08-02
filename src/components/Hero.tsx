@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Hero = () => {
+export const Hero = () => {
   const scrollToAbout = () => {
     const element = document.getElementById("about");
     if (element) {
@@ -129,5 +129,3 @@ const Hero = () => {
     </section>
   );
 };
-
-export default Hero;
